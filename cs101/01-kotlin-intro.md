@@ -87,9 +87,9 @@ Create som code that defines an array of integers. The code should iterate throu
 - If an element is odd, multiply it by 3 and add 1.
 
 ```kotlin
-original_array = [1, 2, 3, 4, 5]
-transformed_array = transformArray(original_array)
-print(transformed_array) // [4, 1, 10, 2, 16]
+original_list = [1, 2, 3, 4, 5]
+transformed_list = transformList(original_array)
+print(transformed_list) // [4, 1, 10, 2, 16]
 ```
 
 It should log the transformed array
@@ -111,6 +111,72 @@ Should video title be `val` or `var` [https://www.youtube.com/watch?v=d0d9nsTLaK
 
 
 ## Topics
+
+### Running your first Kotlin script in Android studio
+
+Først lav et nyt projekt
+
+![CleanShot-2025-12-01-at-11.17.19](assets/CleanShot-2025-12-01-at-11.17.19.png)
+
+
+
+Vælg `No Acticity`
+
+![CleanShot-2025-12-01-at-11.18.07](assets/CleanShot-2025-12-01-at-11.18.07.png)
+
+
+
+Giv projektet et navn
+
+![CleanShot-2025-12-01-at-11.18.59](assets/CleanShot-2025-12-01-at-11.18.59.png)
+
+Vent på at Android Studio har bygget færdig
+
+
+
+Nu skal du lave et nyt module `File -> New -> New Module`
+
+![CleanShot-2025-12-01-at-11.19.49](assets/CleanShot-2025-12-01-at-11.19.49.png)
+
+Vælg `Java or Kotlin Library`
+
+![CleanShot-2025-12-01-at-11.20.47](assets/CleanShot-2025-12-01-at-11.20.47.png)
+
+
+
+Nu kan du under mappen `lib -> main -> java -> com.example.lib` lave et nyt kotlin script ved at højreklikke på mappen og vælge: `New -> Kotlin Class/File`
+
+
+
+![CleanShot-2025-12-01-at-11.23.47](assets/CleanShot-2025-12-01-at-11.23.47.png)
+
+
+
+Vælg File
+
+![CleanShot-2025-12-01-at-11.24.39](assets/CleanShot-2025-12-01-at-11.24.39.png)
+
+
+
+Nu kan du tilføje koden:
+
+```kotlin
+package com.example.lib
+
+fun main() {
+    print("asd")
+}
+```
+
+
+
+Trykke på den grønne play knap og så kan du se outputtet i konsollen
+
+![CleanShot-2025-12-01-at-11.25.54](assets/CleanShot-2025-12-01-at-11.25.54.png)
+
+
+
+Ja puha sikke en omgang
 
 
 
