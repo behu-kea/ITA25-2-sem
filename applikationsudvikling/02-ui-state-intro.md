@@ -187,6 +187,8 @@ A composable that uses `remember` to store an object creates internal state, mak
 
 
 
+<!--
+
 ## Magisk lommeregner
 
 Vi skal lave en magisk lommeregner der kan hjælpe med et trylle trick der virkelig kan imponere

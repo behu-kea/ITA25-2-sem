@@ -29,6 +29,8 @@
 
 - Intro til applikationsudvikling faget
 - Hvordan lærer jeg nyt stof
+  - 
+
 - Jeg koder lidt Kotlin
 - Peer instruction
 - Opgaver
