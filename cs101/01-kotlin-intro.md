@@ -27,10 +27,7 @@
 
 ## Overview
 
-- Intro til applikationsudvikling faget
-- Hvordan lærer jeg nyt stof
-  - 
-
+- Intro til applikationsudvikling faget slides `intro-nifr`
 - Jeg koder lidt Kotlin
 - Peer instruction
 - Opgaver
@@ -41,7 +38,7 @@
 
 ## Peer instruction
 
-
+<!--
 
 ### Question 1
 
@@ -78,6 +75,8 @@ for (i in 1..5) {
 3. 1 2
 4. 3
 5. None of the above
+
+-->
 
 
 
