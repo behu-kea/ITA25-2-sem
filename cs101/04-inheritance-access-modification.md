@@ -24,7 +24,7 @@
 ## Overview
 
 - Talk about 4 pillars of OOP. With code examples
-  -  Survival MMO
+  -  Survival MMO https://github.com/behu-kea/ita24-2sem-code/blob/main/inheritance/app/src/main/java/com/example/inheritance/main.kt
     -  Survivor - name. fightZombies
   
     -  TheLeader - name, bravery, motivateTeam(), is secretelyTerrified
@@ -46,6 +46,7 @@
 
 - [Fundamental Concepts of Object Oriented Programming](https://www.youtube.com/watch?v=m_MQYyJpIjg)
 - [Learn Kotlin for Android: Inheritance (Lesson 17)](https://www.youtube.com/watch?v=33DNMPOFvuA)
+- [Encapsulation](https://www.youtube.com/watch?v=85vDxSagygU)
 
 
 
@@ -83,7 +84,7 @@ fun main() {
 
 
 
-### Question 3
+### Question 2
 
 What will the following code print?
 
@@ -366,21 +367,12 @@ Create a Kotlin class called `BankAccount` with the following properties:
 
 
 
-### Opgave 4 - level 2
-
-Create a class named `Student` to represent student information.  Include properties such as `name`, `birthdate`, and `grade`. 
-
-- Implement a custom setter for the `grade` property to ensure that the grade is within a valid range (e.g., 0 to 100).
-- Additionally, implement a custom getter for the `age` property to calculate the student's age based on their birthdate, which is passed as a parameter during object construction.
-
-
-
 ### Opgave 6 - level 3
 
 Create a class `Person`. A person has a cpr number and name
 
 - A person has a private function that calculates the age of the person by their CPR number
-- A person has a field: age.
+- A person has a field: `age`
   - The field is public and uses the private function to return a result.
   - The setter is private, as no one from outside should be able to use the function
 - The setter for the CPR number should check if the CPR number is valid before setting it. 
