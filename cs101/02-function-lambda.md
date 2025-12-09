@@ -20,8 +20,8 @@
 ## Overview
 
 - Hvorfor det her semester er mega fedt!
-- [https://behu.gitbook.io/ita24-2.-semester/ai-retningslinjer](https://behu.gitbook.io/ita24-2.-semester/ai-retningslinjer)
-- Alt kode jeg skriver smider jeg herind: [https://github.com/behu-kea/ita24-2sem-code](https://github.com/behu-kea/ita24-2sem-code)
+- [https://behu.gitbook.io/ita25-2.-semester/ai-retningslinjer](https://behu.gitbook.io/ita24-2.-semester/ai-retningslinjer)
+- Alt kode jeg skriver smider jeg herind: [https://github.com/behu-kea/ita25-2sem-code](https://github.com/behu-kea/ita25-2sem-code)
 - benjamin koder
   - Higher order function. Greeting
   - Løs samme opgaver som igår med map

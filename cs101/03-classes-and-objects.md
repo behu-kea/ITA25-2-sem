@@ -31,9 +31,6 @@
 
 ## Overview
 
-- Hvornår vil i gerne have at Ane er tilgængelig udenfor klassen?
-
-  - 12:30 - 14:30
 - Peer instruction
 - Model Smartphone
   - Getter setter
@@ -43,6 +40,7 @@
   - Constructor
   - Data vs behaviour
   - toString
+  - Briefly mention `this`!
 - Classes are blueprints
 
 
@@ -66,7 +64,7 @@ Optional
 
 ## Peer instruction
 
-
+<!--
 
 ### Question 1
 
@@ -112,6 +110,8 @@ What is the output of the above code when executed?
 3. 1
 4. Null
 5. Compiler error
+
+-->
 
 
 
@@ -362,29 +362,31 @@ Instantiate at least one object per class
 
 ### 📝 Exercise 3 - level 2
 
-1. Skriv en klasse der hedder `Lamp`
+Create a `Product` class for an online shop.
 
-2. `Lamp` har en boolean attribut der angiver om den er tændt eller slukket. 
+Requirements:
 
-3. Når man laver et nyt `lamp`-objekt skal der være en constructor hvor man kan vælge om lampen som udgangspunkt er tændt eller slukket
+- Properties:
+  - `name: String`
+  - `price: Double`
+    - Setter: price cannot be negative (clamp to 0)
+- Function:
+  - `applyDiscount(percent: Int)` where 10 means 10%
 
-4. Skriv en metode der hedder `toggleLight`, som tænder lampen hvis den er slukket, og slukker lampen hvis den er tændt. 
-
-5. Lav en klasse `Room` med en metode hvor du instantierer forskellige lampeobjekter (skrivebordslampe, sengelampe el. lign.) og tester om de virker som de skal
-
-7. Lav en metode der returnerer antal gange lampen er togglet.
+Create a `Product` and print it. Then apply the discount, then print it again. 
 
 
 
 ### 📝 Exercise 4 - level 3
 
-Create a class `Pokemon` that has the attributes mood, energy, and hunger, with a range of values between 10 (maximum) and 0 (minimum)
+Create a class `SocialMediaPost` 
 
-Create methods that can change the attributes. If a method attempts to raise an attribute above 10 or lower it below 0, the attribute should remain unchanged, and a message should be printed indicating that the pokemon is at maximum/minimum [mood/energy/hunger].
-
-Now create a class `Pokeball` that includes a method to catch `pokemon` objects
-
-In the main method, create an instance of `Pokeball` and generate several `Pokemon` objects.
+- A  `SocialMediaPost`  has `text`, and `likes`. `likes` cannot be less than 0! And the `text` field cannot be an empty string
+  - It should have a function for adding a like, removing a like and editing the text
+- A `Feed`
+  - A feed has a list of  `SocialMediaPost` 
+  - It should be possible to add and remove  `SocialMediaPost`  from a `Feed`
+  - It should be possible to display the `Feed` in the terminal. Complete with `likes` and `text`
 
 
 
