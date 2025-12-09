@@ -11,16 +11,6 @@
 
 
 
-<!--
-
-## In class considerations
-
-- Exercises missed encapsulation
-
--->
-
-
-
 ## Overview
 
 - Talk about 4 pillars of OOP. With code examples
@@ -326,7 +316,52 @@ fun main() {
 
 
 
-### Opgave 1 - level 2
+### Opgaver 1 - THE HEIST - Access modifiers
+
+```kotlin
+// ============================================
+// EXERCISE 1: THE HEIST - Access Modifiers
+// ============================================
+// You're coding a bank vault system for a heist movie simulator.
+// The vault has: 
+// - A secret combination (only the Vault should know)
+// - An alarm system (subclasses like SuperVault need access)
+// - A public interface to attempt opening it
+// 
+// Task: A hacker is trying to break in. They can call tryOpen() with codes,
+// but they shouldn't be able to directly read the combination or disable the alarm.
+// Add access modifiers to make this secure!
+
+class Vault {
+    val secretCombination = "1234"  // TODO: Fix access
+    var alarmEnabled = true          // TODO: Fix access
+    var attempts = 0
+    
+    fun tryOpen(code: String): String {
+        attempts++
+        if (code == secretCombination && !alarmEnabled) {
+            return "💰 VAULT OPENED! You got the money!"
+        } else if (attempts >= 3) {
+            return "🚨 ALARM TRIGGERED! Police are coming!"
+        }
+        return "❌ Wrong code. ${3 - attempts} attempts remaining."
+    }
+}
+
+class HackerAttempt {
+    fun breakIn() {
+        val vault = Vault()
+        
+        // This should not be possible!
+        val secretCode = vault.secretCombination;
+        println(vault.tryOpen(secretCode))
+    }
+}
+```
+
+
+
+### Opgave 2 - level 2
 
 Write a class called `Animal`. An `animal` has 3 properties:
 
@@ -334,7 +369,7 @@ Write a class called `Animal`. An `animal` has 3 properties:
 - `nrOfLegs`
 - `isMammal`
 
-Animal has a method: `makeSound()` that prints the sound of the animal.
+Animal has a method: `makeSound()` that prints the sound of the animal
 
 - Create 2 animal classes that extends the Animal class and overrides
   the method to produce their unique sound.
@@ -343,7 +378,7 @@ Animal has a method: `makeSound()` that prints the sound of the animal.
 
 
 
-### Opgave 2 - level 2
+### Opgave 3 - level 2
 
 Create a hierarchy of food items in a restaurant menu. Implement a base class called `FoodItem` with properties `name`, `description`, and `price`. 
 
@@ -356,23 +391,13 @@ Create a hierarchy of food items in a restaurant menu. Implement a base class ca
 
 
 
-### Opgave 3 - level 2
-
-Create a Kotlin class called `BankAccount` with the following properties:
-
-1. `accountNumber`: The account number of the bank account.
-2. `balance`: The current balance of the bank account.
-
-- Implement custom getter and setter methods for the `balance` property. The setter should ensure that the balance is always non-negative. If a negative value is attempted to be set, it should be adjusted to 0.
-
-
-
-### Opgave 6 - level 3
+### Opgave 4 - level 3
 
 Create a class `Person`. A person has a cpr number and name
 
 - A person has a private function that calculates the age of the person by their CPR number
 - A person has a field: `age`
-  - The field is public and uses the private function to return a result.
+  - The field is public and uses the private function to return a result
   - The setter is private, as no one from outside should be able to use the function
-- The setter for the CPR number should check if the CPR number is valid before setting it. 
+- The setter for the CPR number should check if the CPR number is valid before setting it
+

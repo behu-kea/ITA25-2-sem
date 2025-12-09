@@ -7,9 +7,9 @@
   *  [02 - Functions & exceptions](cs101/02-function-lambda.md)
   *  [03 - Classes & objects](cs101/03-classes-and-objects.md)
   *  [04 - Inheritance & access modification](cs101/04-inheritance-access-modification.md)
-  *  [05 - Algorithms & searching & sorting & big O](cs101/06-algorithms-searching-sorting-big-o.md)
-  *  [06 - Algorithms & searching & sorting & big O](cs101/06-algorithms-searching-sorting-big-o.md)
-  *  [07 - Datastructures & collections](cs101/05-datastructures-collections.md)
+  *  [05 - Algorithms & searching & sorting & big O](cs101/05-algorithms-searching-sorting-big-o.md)
+  *  [06 - Algorithms & searching & sorting & big O](cs101/05-algorithms-searching-sorting-big-o.md)
+  *  [07 - Datastructures & collections](cs101/06-datastructures-collections.md)
   *  [08 - Test](cs101/08-test.md)
   *  [09 - Recap](cs101/07-recap.md)
 * Applikationsudvikling

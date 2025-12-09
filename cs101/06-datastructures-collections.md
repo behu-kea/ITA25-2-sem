@@ -12,11 +12,7 @@
 
 ## Afterclass consideration
 
-- Messy gang
-- Den første case var ikke specielt god. For svær. Den ligger heller ikke op til noget oplagt, men er ret svær. 
-- Jeg ved ikke helt hvor meget de lærer af at snakke med hinanden om deres kode
 - Slidsene var okay, men mangler noget implementation
-- Jeg rodede lidt rundt i det idag
 
 -->
 
@@ -45,42 +41,94 @@
 
 
 
-### Pre-exercise
-
-Using the code from your handed in assignment. Present the code for your study mate. Talk about the code technically. What is it doing and why did you do it that way?
-
-Hvis i ikke har fået lavet opgaven, så få ChatGPT til at lave løsningen for en af opgaverne og snak om det.
-
-
-
 ### Opgave 1 - del 1 - I studiegruppen - 20 min
 
-**Case 1: Sorted City Names for a Travel Agency**
-
-**Scenario:** A travel agency wants to maintain a list of all cities they offer tours to. The system must:
-
-- Ensure city names are stored in alphabetical order.
-- Automatically place new cities in the correct order when added.
+For hver meeting skal i vælge en datastruktur og skrive kort hvorfor i har valgt den i har
 
 
 
-**Case 2: Managing a Playlist**
+📝 **Meeting 1 — The Bakery Order Queue**
 
-**Scenario:** A music streaming app needs to manage a user’s playlist. The playlist:
+A bakery wants a system to manage **orders that come in throughout the day**.
+ They mainly need to:
 
-- Should allow duplicate songs (e.g., a user can add the same song multiple times).
-- Must maintain the order of the songs as added.
-- Needs efficient random access to any song.
+- Always serve **the first order that came in**
+- Occasionally inspect the next 1–2 orders
+- New orders come in frequently
+- They rarely need to jump to order *#50*, *#100*, etc.
 
 
 
-**Case 3: Employee Directory**
+📝 **Meeting 2 — VIP Guest List for a Music Festival**
 
-**Scenario:** A company wants to store employee records where:
+A festival needs to maintain a **VIP guest list** where:
 
-- Each employee has a unique ID (key) and associated details like name and department (value).
-- Lookups by ID need to be fast.
-- Order of entry is irrelevant.
+- **No duplicate names** are allowed
+- Order **does not matter**
+- They need to quickly check whether a name is on the list
+
+
+
+📝 **Meeting 3 — Tracking User Preferences in an App**
+
+An app stores settings like:
+
+```
+theme = "dark"
+fontSize = 16
+notifications = true
+language = "en"
+```
+
+Requirements:
+
+- Each preference has a **unique key**
+- They need to quickly find a preference by key
+- Order does **not** matter
+
+
+
+📝 **Meeting 4 — Recently Viewed Products on a Webshop**
+
+The webshop needs to show a customer’s **recently viewed products** in the exact order viewed.
+
+Requirements:
+
+- No duplicates
+- Must preserve order
+- Fast membership checks ("have they seen this product before?")
+
+
+
+📝 **Meeting 5 — Playlist System for a Music App**
+
+Users should be able to:
+
+- Add songs to the playlist
+- Jump to any song by index
+- Occasionally insert songs in the **middle**
+- Order matters
+- Duplicates are allowed
+
+
+
+📝 **Meeting 6 — Inventory System for a Warehouse**
+
+The warehouse stores items like this:
+
+- Each item has a **unique ID**
+- They must keep insertion order (for audit purposes)
+- They also need **fast lookup by ID**
+
+
+
+📝 **Meeting 7 — Undo/Redo History for a Text Editor**
+
+The text editor stores actions:
+
+- You must always remove the **newest** action first ("undo")
+- You only need linear access and occasional iteration
+- Insertions/deletions at the head must be fast
 
 
 
@@ -135,7 +183,7 @@ To solve the following exercises you need to understand how to [read text files]
   - Name
   - Email
   - Age
-  - Subjects : list
+  - Subjects: List
 - Implement the comparable interface such that students can be sorted by age
   - Improve the solution such that if students are the same age, they are sorted by amount of subjects
   - I.E A student with the same age as another student is rated "higher" if the have more subjects

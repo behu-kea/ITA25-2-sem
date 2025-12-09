@@ -4,7 +4,7 @@ De næste to gange skal i selv planlægge og gennemføre jeres læring. Det er b
 
 
 
-I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er der til at facilitere og hjælpe jer videre. 
+I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er der til at facilitere og hjælpe selvfølgelig meget gerne med spørgsmål 
 
 
 
@@ -101,97 +101,6 @@ Vis at man kan snakke med ChatGPT om det her.
 - [Top 7 Algorithms for Coding Interviews Explained **SIMPLY**](https://www.youtube.com/watch?v=kp3fCihUXEg)
 
 
-
-## Feedback på aflevering
-
-- Jeg er igang med at lave en eksamenssimulator. Vil nogle af jer interviewes 15-30 min om hvordan sådan en simulator kunne være en hjælp for jer?
-  
-- Smart måde at lave if else på: 
-  
-  ```kotlin
-  class Employee(val firstname: String, val lastname: String, salary: Double) {
-      var salary: Double = salary
-          set(value) {
-              field = if (value < 0) 0.0 else value // Prevents negative salary
-          }
-      init {
-          if (salary < 0.0) this.salary = 0.0
-      }
-  
-  }
-  ```
-  
-- Funktions navngivninger:
-  ```kotlin
-  open fun checkSize() {
-      println("YO! THIS COMPUTER IS $size!!! COOL")
-  }
-  ```
-
-  ```kotlin
-  fun countCameras() {
-      println("There are $cameraCount cameras. ")
-  }
-  ```
-
-- Tænk over typer
-  ```kotlin
-  class Shoe(name: String, price: Int, quantity: Int): Product(name, price, quantity) {
-  ```
-
-- Tænk over encapsulation, `private`, `public`, `internal`
-
-- Tænk over typer: `private val radius: Double`
-
-- Fedt med `ENMU`: `enum class DeviceState { OFF, ON } //Class til`
-
-- I har meget `var` og meget `Double`
-
-- Fedt med type: `val currentYear: Int = Year.now().value`
-
-- OPtimering her:
-  ```kotlin
-  val ageOfModel: Int = currentYear - yearOfRelease
-      if (ageOfModel == 1) {
-          println("The current age of the $model is: $ageOfModel year")
-      } else
-          println("The current age of the $model is: $ageOfModel years")
-  }
-  ```
-
-- ```kotlin
-  val ageOfModel = currentYear - yearOfRelease
-  println("The current age of the $model is: $ageOfModel year${if (ageOfModel == 1) "" else "s"}")
-  ```
-
-- ```kotlin
-   fun displayRaise() {
-      println("Yearly salary with a ten percent raise for ${this} is: \$$yearlySalaryTenPercentRaise in total")
-  }
-  ```
-
-  Måske `printRaise`
-
-- Det her behøves man ikke:
-
-  ```kotlin
-  
-  class Laptop(model: String, serialNumber: Long, yearOfRelease: Int, var bluetoothStatus: Boolean): Computer(model, serialNumber, yearOfRelease) {
-      override fun displayAgeOfModel() {
-          super.displayAgeOfModel()
-      }
-  
-      override fun displayDetails() {
-          super.displayDetails()
-      }
-  
-      fun isBluetoothOn() {
-          println("Is Bluetooth on: $bluetoothStatus")
-      }
-  }
-  ```
-
-  
 
 ## Grupper
 
