@@ -1,6 +1,6 @@
 # Hand-in 1
 
-![[Generated Image December 10, 2025 - 10_48AM(1)](https://suno.com/s/6VkwusKmhDRJkseX)](assets/Generated Image December 10, 2025 - 10_48AM(1).png)
+![Generated Image December 10, 2025 - 10_48AM(1)](assets/Generated Image December 10, 2025 - 10_48AM(1).png)
 
 [Link to song here!](https://suno.com/s/6VkwusKmhDRJkseX)
 
