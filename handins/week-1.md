@@ -1,6 +1,6 @@
 # Hand-in 1
 
-[![Ingen GPT](assets/ingen-gpt.png)](https://suno.com/s/6VkwusKmhDRJkseX)
+![Ingen GPT](assets/ingen-gpt.png)
 
 
 
