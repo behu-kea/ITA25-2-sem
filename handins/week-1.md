@@ -4,7 +4,7 @@
 
 
 
-[Link to song here!](https://suno.com/s/6VkwusKmhDRJkseX)
+[INGEN GPT I MIN HJEMMEOPGAVE - SONG LINK HERE!](https://suno.com/s/6VkwusKmhDRJkseX)
 
 
 
