@@ -28,6 +28,8 @@
   -  **Inheritance** - Inheritance is a fundamental concept in object-oriented programming  where a new class (subclass) can inherit properties and behaviors from  an existing class (superclass). This allows for code reusability and promotes organization
   -  **Polymorphism** - The condition of occurring in several different forms. More concretely an object will behave differently based on the context it is called from
 
+- Opgaverne 5 efterpause kl 10:15. Hvis den er for svær tager vi på klassen
+  
 - Snakke om på mandag. Selvlæring
 
 
@@ -391,7 +393,119 @@ Create a hierarchy of food items in a restaurant menu. Implement a base class ca
 
 
 
-### Opgave 4 - level 3
+### Opgaverne 4 - level 2
+
+The following code has been created by AI, but there is some code smell here. Things could definitely be improved. But how? 
+
+```kotlin
+open class Room(
+    var roomName: String,
+    var unlocked: Boolean
+) {
+    fun unlock() {
+        unlocked = true
+        println("Room is now open!")
+    }
+
+    open fun puzzle(): Boolean {
+        println("No puzzle here.")
+        return true
+    }
+}
+
+class MathRoom(
+    name: String,
+    unlocked: Boolean,
+    var answer: Int
+) : Room(name, unlocked) {
+
+    override fun puzzle(): Boolean {
+        println("Solve the equation: 2 + 2 * 3")
+        if (answer == 8) {
+            println("Correct!")
+            unlocked = true   // direct game logic
+            return true
+        }
+        return false
+    }
+}
+
+class RiddleRoom(
+    name: String,
+    unlocked: Boolean,
+    var riddleAnswer: String
+) : Room(name, unlocked) {
+
+    override fun puzzle(): Boolean {
+        println("What has keys but can't open doors?")
+        if (riddleAnswer.lowercase() == "piano") {
+            unlocked = true
+            return true
+        } else {
+            println("Wrong answer!")
+            return false
+        }
+    }
+}
+
+
+// ----------------- Controller -----------------------
+
+class EscapeGame {
+
+    val rooms: MutableList<Room> = mutableListOf()
+    var currentRoomIndex = 0
+
+    fun startGame() {
+        println("Welcome to the escape game.")
+        println("You are in: " + rooms[currentRoomIndex].roomName)
+
+        // this function does more than starting the game:
+        // - prints UI
+        // - checks puzzle
+        // - moves player
+        // - handles game end
+        while (currentRoomIndex < rooms.size) {
+
+            val success = rooms[currentRoomIndex].puzzle()
+
+            if (rooms[currentRoomIndex].unlocked && success) {
+                println("You can now move forward.")
+                currentRoomIndex += 1
+            } else {
+                println("Try again!")
+            }
+
+            if (currentRoomIndex >= rooms.size) {
+                println("Congrats! You escaped!")
+            }
+        }
+    }
+
+    fun addRoom(r: Room) {
+        rooms.add(r)   // anyone can add any room in any order
+    }
+}
+
+
+// ------------------ App ----------------------------
+
+fun main() {
+    val game = EscapeGame()
+
+    val r1 = MathRoom("Math Time", false, 8)
+    val r2 = RiddleRoom("Riddles-R-Us", false, "Piano")
+
+    game.rooms.add(r1)      // direct list access (bad)
+    game.addRoom(r2)        // inconsistent API usage
+
+    game.startGame()
+}
+```
+
+
+
+### Opgave 5 - level 3
 
 Create a class `Person`. A person has a cpr number and name
 
