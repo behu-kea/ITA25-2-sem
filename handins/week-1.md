@@ -1,6 +1,8 @@
 # Hand-in 1
 
-![Generated Image December 10, 2025 - 10_48AM(1)](assets/Generated Image December 10, 2025 - 10_48AM(1).png)
+[![Ingen GPT](assets/ingen-gpt.png)](https://suno.com/s/6VkwusKmhDRJkseX)
+
+
 
 [Link to song here!](https://suno.com/s/6VkwusKmhDRJkseX)
 
