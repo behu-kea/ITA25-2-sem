@@ -7,7 +7,7 @@
 - [https://www.youtube.com/ariathome](https://www.youtube.com/ariathome)
 - Viewmodel statehoisting recap
   - Start med `forEach`
-- Intro til Cloud Firestore
+- Intro til Supabase
   - Create a new database with a collection and a document
 - ORM
   - ![Decoding ORM: A Deep Dive into Object-Relational Mapping - DEV Community](assets/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhh18qd6898k7ak3fmvan-20250327132344721.jpg)
@@ -32,138 +32,17 @@
 
 
 
-## Create your Firestore in Firebase
+[Getting started with Android and Supabase](https://www.youtube.com/watch?v=_iXUVJ6HTHU)
 
-go to [https://console.firebase.google.com/?pli=1](https://console.firebase.google.com/?pli=1) -> add project, give it a name -> Add analytics if necessary -> click create
-
-
-
-Go into your Firestore and under `Get started by adding Firebase to your app` click on Android. Follow the guide. 
+Ingen ORM med supabase
 
 
 
-Now create a Database in your Firestore. Go to your firebase project -> click Cloud Firestore -> click Create database. Select `Start in test mode`
-
-**🚨OBS!!!!!🚨**: The default security rules for test mode allow anyone with your database reference to view, edit and delete all data in your database for the  next 30 days **🚨OBS!!!!!🚨**
-
-Now in your `build.gradle.kts` (Module App) add the following line
-
-```
-implementation("com.google.firebase:firebase-firestore")
-```
 
 
 
-## Secure your data
-
-```json
-// Allow read/write access on all documents to any user signed in to the application
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if request.auth != null;
-    }
-  }
-}
-```
 
 
-
-## Create a Collection in Cloud Firestore
-
-Go to your Cloud Firestore database
-
-![Cloud Firestore](assets/CleanShot-2024-02-02-at-12.11.58.png)
-
-Click `Start collection` -> Give it a name -> Now create a document:
-
-Give it an Auto-id and create the relevant fields and values for your first document
-
-
-
-## Setting up Firestore
-
-First we need to import the right libraries in the file you will be using
-
-```kotlin
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.firestore
-```
-
-
-
-Then you need to create a new instance of a Firestore database
-
-```kotlin
-val db = Firebase.firestore
-```
-
-
-
-## Saving data
-
-We are now ready to use kotlin to save data in our database
-
-
-
-### Creating a data class
-
-To hold data we will be using a specific kind of class called a data class. A `data class` is a special class type primarily intended to hold data. The most important feature for us is the serialisation method. Serialization refers to the process of converting an object into a  format that can be stored or transmitted (like JSON, binary, etc.)
-
-Let's create a `Car` data class that matches the fields in the Firestore database:
-
-```kotlin
-import com.google.firebase.firestore.DocumentId
-
-data class Car(
-    val color: String = "", // Make properties public
-    val numberOfWheels: Int = 0, // Provide default values
-  	@DocumentId var documentId: String? = null
-) 
-```
-
-The important is the `documentId` annotation! It ensures that the documentId from Firestore is put into the object when fetching and creating! That is because Firestore creates the id not us! At least by default
-
-
-
-### Saving an object into Firestore
-
-We now have all we need. Create a new object and add it to the database using the following code and the `.add` function
-
-```kotlin
-suspend fun save() {
-  // Create a new user with a first and last name. Here Firestore will create a DocumentId but we dont need to add it when creating an object
-  val greenCar = Car("green", 5);
-
-  // Add a new document with a generated ID
-  db.collection("cars")
-      .add(greenCar)
-      .await()
-}
-
-```
-
-
-
-## Getting data from Firestore
-
-To get data from Firestore we use the `.get` function
-
-```kotlin
-suspend fun getAll():List<Prompt> {
-    // Add a new document with a generated ID
-    return db.collection("prompts")
-        .get()
-        .await()
-        .toObjects(Prompt::class.java)
-}
-```
-
-Here we get the `result` from the database and then convert the result into an object we can work with in Kotlin using the `toObjects` method: 
-
-
-
-It is also possible to delete and edit
 
 
 
@@ -179,9 +58,9 @@ Den anden del fokuserer på hvordan man ville bruge Firestore i et mere "profess
 
 **Arbejd i studiegrupper!**
 
-Godt gået med Todo-listen! Michael var *så* begejstret for jeres arbejde med Clean Architecture, at han næsten  glemte alt om MV-et-eller-andet. Jeres indsats har virkelig hjulpet  Todoist!
+Godt gået med Todo-listen! Michael var *så* begejstret for jeres arbejde med Clean Architecture, at han næsten glemte alt om MV-et-eller-andet. Jeres indsats har virkelig hjulpet  Todoist!
 
-Nu har Michael og Todoist fået blod på tanden og vil udvide deres produktportefølje. De vil bygge en **Notes-app**! De har fået fingrene i et eksisterende projekt fra en (nu opkøbt) konkurrent. Dette projekt *skulle* efter sigende være bygget med en mere "professionel" arkitektur fra  starten. Michael er dog lidt skeptisk efter sidste oplevelse og vil  gerne have *jer*, hans favorit-konsulenter, til at kigge på det.
+Nu har Michael og Todoist fået blod på tanden og vil udvide deres produktportefølje. De vil bygge en **Notes-app**! De har fået fingrene i et eksisterende projekt fra en (nu opkøbt) konkurrent. Dette projekt *skulle* efter sigende være bygget med en mere "professionel" arkitektur fra  starten. Michael er dog lidt skeptisk efter sidste oplevelse og vil gerne have *jer*, hans favorit-konsulenter, til at kigge på det.
 
 "Det ser pænere ud ved første øjekast," siger Michael, "men jeg har på  fornemmelsen, at der lurer problemer under overfladen. Og vi mangler  altså nogle helt basale funktioner! Kan I hjælpe os med at få styr på  denne her Notes-app, så den lever op til Todoist-standarden?"
 

@@ -1,6 +1,10 @@
 # Hand-in 3
 
-**Preface: **These exercises are solved easily by large language models such as ChatGPT. It is highly advised **against usage** of LLM's for the purpose of **generating code** to solve these exercises and would count as **fraud**. It would furthermore defeat the purpose as the following exercises are made to sharpen logical thinking & shape algorithmic understanding.
+![Generated Image December 10, 2025 - 8_56PM](assets/Generated Image December 10, 2025 - 8_56PM.png)
+
+[https://suno.com/song/41d56639-d6d9-4559-bb80-4c28ae58adf6](https://suno.com/song/41d56639-d6d9-4559-bb80-4c28ae58adf6)
+
+
 
 - Collections
 
