@@ -1,6 +1,6 @@
 # Hand-in 2
 
-![Generated Image December 10, 2025 - 9_06PM](assets/Generated Image December 10, 2025 - 9_06PM.png)
+![Generated Image December 10, 2025 - 9_06PM](assets/2.png)
 
 [SANG TO LINK HER!!!](https://suno.com/song/b6806154-5453-4c6a-b957-b38e6c4f7618)
 
