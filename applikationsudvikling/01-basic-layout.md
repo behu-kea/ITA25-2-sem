@@ -4,7 +4,6 @@
 
 ## Overview
 
-- Peer instruction
 - Android Studio
 - Native App vs web site vs Webapp
 - Component based UI
@@ -180,10 +179,6 @@ Recreate the following layouts
 ![Recreate the following layouts](assets/CleanShot-2023-02-27-at-11.04.42.png)
 
 For this exercise you will need to do some research. Fx how to add an image, how column and rows work, etc. 
-
-
-
-
 
 
 

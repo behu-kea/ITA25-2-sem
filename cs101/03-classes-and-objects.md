@@ -9,10 +9,10 @@
   - Getter, setter
   - Constructor
   - Encapsulation
-- Objects
-- This
+  - Objects
+  - This
+  - toString
 - Behavior vs state
-- toString
 
 
 
@@ -21,7 +21,6 @@
 ## In class considerations
 
 - Det var lidt meget med også feedback på opgaver. 
-- Mike sagde at videoerne var ret svære
 - Getter og setter blev lidt messy. Måske ikke undervise det næste gang. 
 - This var også sådan lidt semi. Behøves vi undervise det?
 

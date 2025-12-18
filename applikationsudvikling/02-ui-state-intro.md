@@ -17,6 +17,8 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 - Konteksten semestret
 - Vis constructor med Student hvor grades er i constructor. Ift hvad man bruger constructor til
 - Me coding a Currency converter
+  - Talk about remember
+
 - Præsenation af case for idag
 - By keyword: [https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207](https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207)
 

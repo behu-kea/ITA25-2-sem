@@ -28,7 +28,7 @@
   -  **Inheritance** - Inheritance is a fundamental concept in object-oriented programming  where a new class (subclass) can inherit properties and behaviors from  an existing class (superclass). This allows for code reusability and promotes organization
   -  **Polymorphism** - The condition of occurring in several different forms. More concretely an object will behave differently based on the context it is called from
 
-- Opgaverne 5 efterpause kl 10:15. Hvis den er for svær tager vi på klassen
+- Opgaverne 5 efter pause kl 10:15. Hvis den er for svær tager vi på klassen
   
 - Snakke om på mandag. Selvlæring
 
