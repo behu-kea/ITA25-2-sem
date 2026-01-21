@@ -376,6 +376,71 @@ Create a `Product` and print it. Then apply the discount, then print it again.
 
 
 
+### 📝 Exercise 3.1 - level 2
+
+```kotlin
+class User(
+    name: String,
+    age: Int
+) {
+    var name: String = name
+        set(value) {
+            field = value.trim()
+        }
+
+    var age: Int = age
+        set(value) {
+            if (value > 0) field = value
+        }
+
+    override fun toString(): String {
+        return "User(name='$name', age=$age)"
+    }
+}
+
+class Wallet(
+    owner: User,
+    balance: Double
+) {
+    var owner: User = owner
+        private set
+
+    var balance: Double = balance
+        set(value) {
+            if (value >= 0) field = value
+        }
+
+    fun spend(amount: Double): Boolean {
+        if (amount <= balance) {
+            this.balance = this.balance - amount
+            return true
+        }
+        return false
+    }
+
+    fun addMoney(amount: Double) {
+        balance += amount
+    }
+
+    override fun toString(): String {
+        return "Wallet(owner=${owner.name}, balance=$balance)"
+    }
+}
+
+fun main() {
+   
+}
+
+```
+
+1. Først kig koden igennem individuelt
+2. Forklar hvad koden gør for din sidemakker. 
+   1. Brug de korrekte tekniske termer. Prøv at hjælpe hinanden med at være ultrapræcise i jeres sprog!
+3. Sammen foreslå nogle ændringer til koden. Hvor kan den forbedres, kan i lide måden koden virker? Hvad kan i ikke lide, etc. Dan en mening om koden. Smag på koden, hvad kan den, hvad kan den ikke, haha you get it
+4. Lad os sammen snakke om koden
+
+
+
 ### 📝 Exercise 4 - level 3
 
 Create a class `SocialMediaPost` 
