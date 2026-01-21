@@ -28,6 +28,16 @@
 ## Overview
 
 - Intro til applikationsudvikling faget slides `intro-nifr`
+- Verden er lidt intense for tiden. Jeg vil forsøge at gøre det lidt hyggeligt/skørt
+  - Musik. Skriv dit navn og den sang du synes vi skal høre. 5 min inden vi starter timen spiller sætter jeg noget musik på fra jer
+    - [https://ek.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=1471902](https://ek.itslearning.com/LearningToolElement/ViewLearningToolElement.aspx?LearningToolElementId=1471902)
+    - [https://behu-kea.github.io/trippy-visuals/](https://behu-kea.github.io/trippy-visuals/) Har vibe kodet den her
+
+  - D. 25/2 bytter vi stil. Selvfølgelig 100% frivilligt. 
+    - Jeg vil forsøge at klæde mig som jer
+    - I skal forsøge at klæde jeg som mig
+
+- Brug af AI ATOM model kommer jeg til at snakke mere om
 - Jeg koder lidt Kotlin
 - Peer instruction
 - Opgaver

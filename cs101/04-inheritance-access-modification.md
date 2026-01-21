@@ -389,7 +389,7 @@ Create a hierarchy of food items in a restaurant menu. Implement a base class ca
   - `spicinessLevel` for `MainCourse`
   - `isVegan` for `dessert`
 
-- Additionally, implement the method `cook()` for all classes, which print out a message indicating what kind of fooditem is currently being cooked.
+- Additionally, implement the method `cook()` for all classes, which print out a message indicating what kind of fooditem is currently being cooked
 
 
 
