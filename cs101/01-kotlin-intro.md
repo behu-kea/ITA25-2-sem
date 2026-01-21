@@ -34,7 +34,11 @@
 - Pause kl 10
 - Jeg løser en opgave af opgaverne
 
+<!--
 
+- Jeg føler virkelig for jeres generation. I al den tid i har levet er ting blevet "værre"
+
+-->
 
 ## Peer instruction
 
