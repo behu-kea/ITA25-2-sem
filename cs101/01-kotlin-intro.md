@@ -36,13 +36,13 @@
   - D. 25/2 bytter vi stil. Selvfølgelig 100% frivilligt. 
     - Jeg vil forsøge at klæde mig som jer
     - I skal forsøge at klæde jeg som mig
-
-- Brug af AI ATOM model kommer jeg til at snakke mere om
 - Jeg koder lidt Kotlin
 - Peer instruction
 - Opgaver
 - Pause kl 10
 - Jeg løser en opgave af opgaverne
+
+
 
 <!--
 
