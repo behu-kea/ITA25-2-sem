@@ -31,6 +31,10 @@
     - I skal finde på mulige løsninger
     - jeg løser til sidst
   - Nullability
+    - Non-null by default
+    - `?` changes the type
+    - Safe call `?.`
+    - Elvis `?:`
 
 
 
@@ -55,6 +59,8 @@ What will the following code output?
 ```kotlin
 fun main() {
     val greet: (String) -> String = { name -> "Hello, $name!" }
+  
+
     println(greet("Kotlin"))
 }
 ```

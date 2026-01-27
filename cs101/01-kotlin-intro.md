@@ -81,7 +81,6 @@ for (i in 1..5) {
     if (i == 3) break
     println(i)
 }
-
 ```
 
 1. 1 2 3 4 5
