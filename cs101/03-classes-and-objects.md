@@ -30,6 +30,7 @@
 
 ## Overview
 
+- I må gerne svare på spørgeskema omkring mineksamen
 - Peer instruction
 - Model Smartphone
   - Getter setter
@@ -379,56 +380,66 @@ Create a `Product` and print it. Then apply the discount, then print it again.
 ### 📝 Exercise 3.1 - level 2
 
 ```kotlin
-class User(
-    name: String,
-    age: Int
-) {
-    var name: String = name
-        set(value) {
-            field = value.trim()
-        }
+class User(name: String, age: Double) {
+    var name = name
+    var age = age
 
-    var age: Int = age
-        set(value) {
-            if (value > 0) field = value
-        }
+    fun updateName(newName: String) {
+        name = newName.trim()
+    }
+
+    fun haveBirthday() {
+        age = age + 1.0
+        println("Birthday! User is now $age years old")
+    }
 
     override fun toString(): String {
-        return "User(name='$name', age=$age)"
+        return "User: $name ($age)"
     }
 }
 
-class Wallet(
-    owner: User,
-    balance: Double
-) {
-    var owner: User = owner
-        private set
+class Account(user: User, balance: Double) {
+    var user = user
+    var balance = balance
 
-    var balance: Double = balance
-        set(value) {
-            if (value >= 0) field = value
-        }
+    fun deposit(amount: Double) {
+        balance = balance + amount
+    }
 
-    fun spend(amount: Double): Boolean {
+    fun withdraw(amount: Double): Boolean {
         if (amount <= balance) {
-            this.balance = this.balance - amount
+            balance = balance - amount
             return true
         }
         return false
     }
 
-    fun addMoney(amount: Double) {
-        balance += amount
+    fun monthlyFee() {
+        balance = balance - 29.0
     }
 
     override fun toString(): String {
-        return "Wallet(owner=${owner.name}, balance=$balance)"
+        return "Account of ${user.name} has balance $balance"
     }
 }
 
 fun main() {
-   
+    val user = User(" Alice ", 20)
+    val account = Account(user, 100.0)
+
+    user.updateName("Alice Johnson")
+
+    account.deposit(50.0)
+    account.withdraw(30.0)
+    account.monthlyFee()
+
+    user.haveBirthday()
+
+    println(user)
+    println(account)
+
+    account.balance = -100.0
+    println(account)
 }
 
 ```
@@ -436,8 +447,14 @@ fun main() {
 1. Først kig koden igennem individuelt
 2. Forklar hvad koden gør for din sidemakker. 
    1. Brug de korrekte tekniske termer. Prøv at hjælpe hinanden med at være ultrapræcise i jeres sprog!
-3. Sammen foreslå nogle ændringer til koden. Hvor kan den forbedres, kan i lide måden koden virker? Hvad kan i ikke lide, etc. Dan en mening om koden. Smag på koden, hvad kan den, hvad kan den ikke, haha you get it
-4. Lad os sammen snakke om koden
+3. Sammen skal i foreslå nogle ændringer til koden. 
+   1. Hvor kan den forbedres?
+   2. Kan i lide måden koden virker? 
+   3. Hvad kan i ikke lide, etc. 
+   4. Dan en mening om koden. Smag på koden, hvad kan den, hvad kan den ikke
+
+4. Implementer de foreslåede ændringer
+5. Lad os sammen snakke om koden
 
 
 

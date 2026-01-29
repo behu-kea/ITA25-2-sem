@@ -59,16 +59,19 @@ What will the following code output?
 
 ```kotlin
 fun main() {
+    fun greet(name) {
+      return "Hello, $name!"
+    }
+  
     val greet: (String) -> String = { name -> "Hello, $name!" }
   
-
     println(greet("Kotlin"))
 }
 ```
 
 1. Hello, $name!
 2. Hello, undefined!
-3. Hello Kotlin!
+3. Hello, Kotlin!
 4. EMPTY string
 5. Syntax error
 
@@ -89,7 +92,8 @@ fun main() {
 1. [3, 5, 6, 9]
 2. [4, 8, 12, 16]
 3. [1, 2, 3, 4]
-4. None of the above
+4. [2, 4, 6, 8]
+5. None of the above
 
 -->
 
