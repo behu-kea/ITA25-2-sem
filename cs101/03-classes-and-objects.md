@@ -31,6 +31,10 @@
 ## Overview
 
 - I må gerne svare på spørgeskema omkring mineksamen
+- Vi har landet det næste projekt og jeg tror i vil synes det er fedt
+  - [https://heart2heart.website/](https://heart2heart.website/)
+  - [https://www.instagram.com/reel/DT0T9F3DFKW/](https://www.instagram.com/reel/DT0T9F3DFKW/)
+
 - Peer instruction
 - Model Smartphone
   - Getter setter
