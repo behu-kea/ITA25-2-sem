@@ -31,9 +31,11 @@
 ## Overview
 
 - I må gerne svare på spørgeskema omkring mineksamen
+- Federe lokaler gruppe
 - Vi har landet det næste projekt og jeg tror i vil synes det er fedt
   - [https://heart2heart.website/](https://heart2heart.website/)
   - [https://www.instagram.com/reel/DT0T9F3DFKW/](https://www.instagram.com/reel/DT0T9F3DFKW/)
+  - [https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/](https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/)
 
 - Peer instruction
 - Model Smartphone
@@ -490,3 +492,16 @@ Create a menu where a user can
 - Create a `TodoItem`
 - Check out a `TodoItem`
 - Remove a `TodoItem`
+
+
+
+
+
+
+
+- I want to make an app where i each day get a notification to do a task i specify
+  I should be able to
+  - Set when the notification should appear
+  - Have a clear overview per week of the days i have completed the task
+  - Should be able to confirm that i have done the task
+  - The task should have a name
