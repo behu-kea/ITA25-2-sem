@@ -30,12 +30,16 @@
 ## Overview
 
 - I må gerne svare på spørgeskema omkring mineksamen
+
 - Federe lokaler gruppe
+
 - Vi har landet det næste projekt og jeg tror i vil synes det er fedt
   - [https://heart2heart.website/](https://heart2heart.website/)
   - [https://www.instagram.com/reel/DT0T9F3DFKW/](https://www.instagram.com/reel/DT0T9F3DFKW/)
   - [https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/](https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/)
+  
 - Peer instruction
+
 - Model Smartphone
   - Først lav attributter (brand, price, batteryPercentage). Dernæst constructor
   - Primary Constructor
@@ -47,6 +51,107 @@
   
 - Classes are blueprints
 
+- Feedback from handin
+
+  - Godt klaret generelt. Jeg kan virkelig se at i har løse opgaverne selv, det skal i have ros for. Jeg ser ingen spor af AI faktisk. 
+
+  - Fejlhåndtering
+
+    - ```kotlin
+      val stringInput = readLine()!!
+          if (stringInput.toInt() >= 18)
+              println("You are ${stringInput.toInt()}, and eligible to vote")
+          else println("You are ${stringInput.toInt()}, and NOT eligible to vote")
+      ```
+
+  - Fedt at bruge de indbyggede kotlin funktioner! `maxOf(a, b, c)`
+
+  - Tænk over parametre
+
+    - ```kotlin
+      fun calculateAverage(): Double {
+          val myList = listOf(7,4,9,13,15)
+      ```
+
+  - Navngivning `cprNumberChecker`
+
+  - Funktionsansvar
+
+    - ```kotlin
+      fun checkIfElligibleForVoting () {
+          print("Enter your age: ")
+          val ageInput = readLine()!!  // https://www.youtube.com/watch?v=XkBYH9vLs50
+          val ageInt = ageInput.toInt()
+              if (ageInt >= 18) {
+                  println("You are elligble to vote")
+              } else {
+                  println("You are not elligible to vote")
+              }
+      }
+      ```
+
+  - Calculate average. use Kotlin functions!
+
+  - Very nice
+
+    - ```kotlin
+      val numbersDividedBy3 = element % 3 == 0
+              val numbersDividedBy5 = element % 5 == 0
+      
+      
+              if (numbersDividedBy3 == true && numbersDividedBy5 == true) {
+      ```
+
+  - `calculateGrade` lugter af when
+
+  - Lav en lambda her
+
+    - ```kotlin
+      fun filterWordsByLength(listOfStrings: List<String>, minimumStringLength: Int): List<String> {
+          return listOfStrings.filter { it.length >= minimumStringLength }
+      }
+      ```
+
+  - Hvilke paramtere `fun isCPRValid(): Boolean {`
+
+  - Lækkert 🤌
+
+    - ```kotlin
+      fun getCPRCheckValidity(cprNr: String): Boolean {
+      
+          val birthDay = cprNr.substring(0, 2).toInt()
+          val birthMonth = cprNr.substring(2, 4).toInt()
+      
+          if (cprNr.length != 10) return false
+          return birthDay in 1..31 && birthMonth in 1..12
+      
+      }
+      ```
+
+    - ```kotlin
+      fun calculateGrade(grade: Int): Char {
+          return when (grade) {
+              in 90..100 -> 'A'
+              in 80..89 -> 'B'
+              in 70..79 -> 'C'
+              in 60..69 -> 'D'
+              else -> 'F'
+          }
+      }
+      ```
+
+    - Hvis lambda:
+      ```kotlin
+      val calculateGrade: (Int) -> Char = {
+              when (it) {
+                  in 90..100 -> 'A'
+                  in 80..89 -> 'B'
+                  in 70..79 -> 'C'
+                  in 60..69 -> 'D'
+              else -> 'F'
+          }
+      }
+      ```
 
 
 

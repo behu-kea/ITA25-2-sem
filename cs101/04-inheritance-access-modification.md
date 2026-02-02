@@ -15,20 +15,28 @@
 
 - Talk about 4 pillars of OOP. With code examples
   -  Survival MMO https://github.com/behu-kea/ita24-2sem-code/blob/main/inheritance/app/src/main/java/com/example/inheritance/main.kt
-    -  Survivor - name. fightZombies
+    -  They all have private energy
   
-    -  TheLeader - name, bravery, motivateTeam(), is secretelyTerrified
+    -  Survivor - name. fightZombies
 
+    -  TheLeader - name, bravery, motivateTeam(), is secretelyTerrified
+  
     -  TheMedic - numberOfMedKits, healSurvivor()
   
     -  TheGuyWhoAlwaysDiesFirst, tripchance, sayLastWords() <- Lad os spørge chatGPT
-  
+    
   -  **Abstraction** - Abstraction means abstracting away certain details. `hitApi('www.kealanparr.com', HTTPMethod.Get)`This function we dont need to know how it is implemented because we know how to work with it
   -  **Encapsulation** - The action of enclosing something in or as if in a capsule. Removing access to parts of your code and making things private is exactly what **Encapsulation** is all about
   -  **Inheritance** - Inheritance is a fundamental concept in object-oriented programming  where a new class (subclass) can inherit properties and behaviors from  an existing class (superclass). This allows for code reusability and promotes organization
   -  **Polymorphism** - The condition of occurring in several different forms. More concretely an object will behave differently based on the context it is called from
-
-- Opgaverne 5 efter pause kl 10:15. Hvis den er for svær tager vi på klassen
+  
+- Videoproduktion skal være færdig kl 10:45
+  
+- Vi ser nogle af videoerne i fællesrummet fra 10:45 - 11:00 🍿
+  
+- Fra 11-11:30 arbejde på case
+  
+- 11:30 - 11:45 diskutere case på klassen
   
 - Snakke om på mandag. Selvlæring
 
@@ -230,8 +238,6 @@ This calls the parent class method and then adds the subclass-specific functiona
 
 Encapsulation involves bundling data (attributes) and behavior (methods) into a single unit (class) and restricting access to them.
 
-
-
 ```kotlin
 class Account(private var balance: Int) {
     fun deposit(amount: Int) {
@@ -318,6 +324,20 @@ fun main() {
 
 
 
+### Opgave 1
+
+I skal forestille jer at arbejde på en formidlingskanal om softwareudvikling. Denne kanal skal lave en video der handler om 4 pillars of OOP. I skal producere denne video. Hvilken platform i vil producere til er lige meget. 
+
+Målgruppen er unge i alderen 18-25 der har udviklet software før. 
+
+Hvordan i laver videoen er helt op til jer, i må gerne dele opgaven op i jeres gruppe. 
+
+I har til kl 10:45.
+
+I kan (men behøves ikke) bruge opgaverne nedenfor til at lære koncepterne bedre
+
+
+
 ### Opgaver 1 - THE HEIST - Access modifiers
 
 ```kotlin
@@ -335,8 +355,8 @@ fun main() {
 // Add access modifiers to make this secure!
 
 class Vault {
-    val secretCombination = "1234"  // TODO: Fix access
-    var alarmEnabled = true          // TODO: Fix access
+    val secretCombination = "1234"
+    var alarmEnabled = true
     var attempts = 0
     
     fun tryOpen(code: String): String {
@@ -354,9 +374,9 @@ class HackerAttempt {
     fun breakIn() {
         val vault = Vault()
         
-        // This should not be possible!
         val secretCode = vault.secretCombination;
-        println(vault.tryOpen(secretCode))
+      	vault.alarmEnabled = false;
+        println(vault.tryOpen(secretCode));
     }
 }
 ```
@@ -384,7 +404,7 @@ Animal has a method: `makeSound()` that prints the sound of the animal
 
 Create a hierarchy of food items in a restaurant menu. Implement a base class called `FoodItem` with properties `name`, `description`, and `price`. 
 
-- Derive two classes `Dessert`, `Appetizer` and `MainCourse` from `FoodItem`. Implement the properties: 
+- Derive three classes `Dessert`, `Appetizer` and `MainCourse` from `FoodItem`. Implement the properties: 
   - `servingSize` for `Appetizer` 
   - `spicinessLevel` for `MainCourse`
   - `isVegan` for `dessert`
@@ -393,119 +413,7 @@ Create a hierarchy of food items in a restaurant menu. Implement a base class ca
 
 
 
-### Opgaverne 4 - level 2
-
-The following code has been created by AI, but there is some code smell here. Things could definitely be improved. But how? 
-
-```kotlin
-open class Room(
-    var roomName: String,
-    var unlocked: Boolean
-) {
-    fun unlock() {
-        unlocked = true
-        println("Room is now open!")
-    }
-
-    open fun puzzle(): Boolean {
-        println("No puzzle here.")
-        return true
-    }
-}
-
-class MathRoom(
-    name: String,
-    unlocked: Boolean,
-    var answer: Int
-) : Room(name, unlocked) {
-
-    override fun puzzle(): Boolean {
-        println("Solve the equation: 2 + 2 * 3")
-        if (answer == 8) {
-            println("Correct!")
-            unlocked = true   // direct game logic
-            return true
-        }
-        return false
-    }
-}
-
-class RiddleRoom(
-    name: String,
-    unlocked: Boolean,
-    var riddleAnswer: String
-) : Room(name, unlocked) {
-
-    override fun puzzle(): Boolean {
-        println("What has keys but can't open doors?")
-        if (riddleAnswer.lowercase() == "piano") {
-            unlocked = true
-            return true
-        } else {
-            println("Wrong answer!")
-            return false
-        }
-    }
-}
-
-
-// ----------------- Controller -----------------------
-
-class EscapeGame {
-
-    val rooms: MutableList<Room> = mutableListOf()
-    var currentRoomIndex = 0
-
-    fun startGame() {
-        println("Welcome to the escape game.")
-        println("You are in: " + rooms[currentRoomIndex].roomName)
-
-        // this function does more than starting the game:
-        // - prints UI
-        // - checks puzzle
-        // - moves player
-        // - handles game end
-        while (currentRoomIndex < rooms.size) {
-
-            val success = rooms[currentRoomIndex].puzzle()
-
-            if (rooms[currentRoomIndex].unlocked && success) {
-                println("You can now move forward.")
-                currentRoomIndex += 1
-            } else {
-                println("Try again!")
-            }
-
-            if (currentRoomIndex >= rooms.size) {
-                println("Congrats! You escaped!")
-            }
-        }
-    }
-
-    fun addRoom(r: Room) {
-        rooms.add(r)   // anyone can add any room in any order
-    }
-}
-
-
-// ------------------ App ----------------------------
-
-fun main() {
-    val game = EscapeGame()
-
-    val r1 = MathRoom("Math Time", false, 8)
-    val r2 = RiddleRoom("Riddles-R-Us", false, "Piano")
-
-    game.rooms.add(r1)      // direct list access (bad)
-    game.addRoom(r2)        // inconsistent API usage
-
-    game.startGame()
-}
-```
-
-
-
-### Opgave 5 - level 3
+### Opgave 4 - level 3
 
 Create a class `Person`. A person has a cpr number and name
 
@@ -514,4 +422,223 @@ Create a class `Person`. A person has a cpr number and name
   - The field is public and uses the private function to return a result
   - The setter is private, as no one from outside should be able to use the function
 - The setter for the CPR number should check if the CPR number is valid before setting it
+
+
+
+### Case
+
+Genereret af Claude Code
+
+```kotlin
+// ============================================
+// MIN STRØM - ELECTRICITY OPTIMIZER APP
+// ============================================
+// This code was written by a junior developer who just learned Kotlin.
+// It WORKS... but the company can't maintain or expand it.
+// 
+// YOUR MISSION:
+// 1. READ the code and understand what it does
+// 2. DISCUSS in groups: What are the problems? (15 min)
+// 3. IDENTIFY which OOP principles are violated
+// 4. REFACTOR the code using the 4 pillars of OOP
+//
+// The app helps users decide WHEN to run appliances based on:
+// - Current electricity price (kr/kWh)
+// - CO2 emissions (green energy vs fossil fuel)
+// - User's priority (save money vs save environment)
+// ============================================
+
+fun main() {
+    // Current electricity data from the grid
+    val currentPrice = 2.5 // kr per kWh
+    val currentCO2 = 150.0 // grams CO2 per kWh
+    
+    // ====== WASHING MACHINE ======
+    val washerName = "Miele Washing Machine"
+    val washerPowerKW = 2.0
+    val washerDurationHours = 1.5
+    val washerEnergyUse = washerPowerKW * washerDurationHours // 3 kWh
+    val washerCost = washerEnergyUse * currentPrice
+    val washerCO2 = washerEnergyUse * currentCO2
+    val washerIsRunning = false
+    var washerCurrentCycleMinutes = 0
+    
+    println("$washerName:")
+    println("  Energy use: $washerEnergyUse kWh")
+    println("  Cost now: ${washerCost} kr")
+    println("  CO2 emissions: ${washerCO2}g")
+    
+    if (currentPrice < 1.5 && currentCO2 < 100) {
+        println("  ✅ BEST TIME TO RUN - Cheap and green!")
+    } else if (currentPrice < 2.0) {
+        println("  ⚠️ OK TIME - Reasonable price")
+    } else {
+        println("  ❌ WAIT - Too expensive and dirty energy")
+    }
+    println()
+    
+    // ====== DISHWASHER ======
+    val dishwasherName = "Bosch Dishwasher"
+    val dishwasherPowerKW = 1.5
+    val dishwasherDurationHours = 2.0
+    val dishwasherEnergyUse = dishwasherPowerKW * dishwasherDurationHours
+    val dishwasherCost = dishwasherEnergyUse * currentPrice
+    val dishwasherCO2 = dishwasherEnergyUse * currentCO2
+    val dishwasherIsRunning = true
+    var dishwasherCurrentCycleMinutes = 45
+    
+    println("$dishwasherName:")
+    println("  Energy use: $dishwasherEnergyUse kWh")
+    println("  Cost now: ${dishwasherCost} kr")
+    println("  CO2 emissions: ${dishwasherCO2}g")
+    
+    if (dishwasherIsRunning) {
+        println("  🔄 RUNNING - $dishwasherCurrentCycleMinutes minutes remaining")
+    } else {
+        if (currentPrice < 1.5 && currentCO2 < 100) {
+            println("  ✅ BEST TIME TO RUN - Cheap and green!")
+        } else if (currentPrice < 2.0) {
+            println("  ⚠️ OK TIME - Reasonable price")
+        } else {
+            println("  ❌ WAIT - Too expensive and dirty energy")
+        }
+    }
+    println()
+    
+    // ====== ELECTRIC OVEN ======
+    val ovenName = "Samsung Electric Oven"
+    val ovenPowerKW = 3.5
+    val ovenDurationHours = 0.75
+    val ovenEnergyUse = ovenPowerKW * ovenDurationHours
+    val ovenCost = ovenEnergyUse * currentPrice
+    val ovenCO2 = ovenEnergyUse * currentCO2
+    val ovenIsRunning = false
+    var ovenCurrentCycleMinutes = 0
+    val ovenCurrentTemp = 0 // degrees celsius
+    val ovenTargetTemp = 200
+    
+    println("$ovenName:")
+    println("  Energy use: $ovenEnergyUse kWh")
+    println("  Cost now: ${ovenCost} kr")
+    println("  CO2 emissions: ${ovenCO2}g")
+    
+    if (currentPrice < 1.5 && currentCO2 < 100) {
+        println("  ✅ BEST TIME TO BAKE - Cheap and green!")
+    } else if (currentPrice < 2.0) {
+        println("  ⚠️ OK TIME - Reasonable price")
+    } else {
+        println("  ❌ WAIT - Too expensive and dirty energy")
+    }
+    println()
+    
+    // ====== ELECTRIC CAR CHARGER ======
+    val chargerName = "Tesla Wall Charger"
+    val chargerPowerKW = 11.0
+    val chargerDurationHours = 4.0
+    val chargerEnergyUse = chargerPowerKW * chargerDurationHours // 44 kWh
+    val chargerCost = chargerEnergyUse * currentPrice
+    val chargerCO2 = chargerEnergyUse * currentCO2
+    val chargerIsRunning = true
+    var chargerCurrentCycleMinutes = 180
+    val chargerBatteryPercent = 45
+    val chargerTargetBatteryPercent = 80
+    
+    println("$chargerName:")
+    println("  Energy use: $chargerEnergyUse kWh")
+    println("  Cost now: ${chargerCost} kr")
+    println("  CO2 emissions: ${chargerCO2}g")
+    println("  Battery: $chargerBatteryPercent% → $chargerTargetBatteryPercent%")
+    
+    if (chargerIsRunning) {
+        println("  🔄 CHARGING - $chargerCurrentCycleMinutes minutes remaining")
+    } else {
+        if (currentPrice < 1.5 && currentCO2 < 100) {
+            println("  ✅ BEST TIME TO CHARGE - Cheap and green!")
+        } else if (currentPrice < 2.0) {
+            println("  ⚠️ OK TIME - Reasonable price")
+        } else {
+            println("  ❌ WAIT - Too expensive and dirty energy")
+        }
+    }
+    println()
+    
+    // ====== HEAT PUMP ======
+    val heatpumpName = "Nibe Heat Pump"
+    val heatpumpPowerKW = 2.5
+    val heatpumpDurationHours = 8.0 // runs all night
+    val heatpumpEnergyUse = heatpumpPowerKW * heatpumpDurationHours
+    val heatpumpCost = heatpumpEnergyUse * currentPrice
+    val heatpumpCO2 = heatpumpEnergyUse * currentCO2
+    val heatpumpIsRunning = true
+    var heatpumpCurrentCycleMinutes = 480
+    val heatpumpCurrentRoomTemp = 18.5
+    val heatpumpTargetRoomTemp = 21.0
+    
+    println("$heatpumpName:")
+    println("  Energy use: $heatpumpEnergyUse kWh")
+    println("  Cost now: ${heatpumpCost} kr")
+    println("  CO2 emissions: ${heatpumpCO2}g")
+    println("  Temperature: ${heatpumpCurrentRoomTemp}°C → ${heatpumpTargetRoomTemp}°C")
+    
+    if (currentPrice < 1.5 && currentCO2 < 100) {
+        println("  ✅ BEST TIME - Cheap and green!")
+    } else if (currentPrice < 2.0) {
+        println("  ⚠️ OK TIME - Reasonable price")
+    } else {
+        println("  ❌ EXPENSIVE - Consider lowering target temp")
+    }
+    println()
+    
+    // ====== TOTAL COSTS ======
+    val totalCostNow = washerCost + dishwasherCost + ovenCost + chargerCost + heatpumpCost
+    val totalCO2Now = washerCO2 + dishwasherCO2 + ovenCO2 + chargerCO2 + heatpumpCO2
+    
+    println("📊 TOTAL IF ALL RUN NOW:")
+    println("  Cost: ${totalCostNow} kr")
+    println("  CO2: ${totalCO2Now}g")
+    
+    // What if we wait for night time when prices drop?
+    val nightPrice = 0.8 // kr per kWh
+    val nightCO2 = 80.0 // more wind power at night
+    
+    val totalEnergyUse = washerEnergyUse + dishwasherEnergyUse + ovenEnergyUse + 
+                         chargerEnergyUse + heatpumpEnergyUse
+    val totalCostAtNight = totalEnergyUse * nightPrice
+    val totalCO2AtNight = totalEnergyUse * nightCO2
+    
+    val savings = totalCostNow - totalCostAtNight
+    val co2Savings = totalCO2Now - totalCO2AtNight
+    
+    println()
+    println("💡 IF YOU WAIT UNTIL NIGHT (01:00-05:00):")
+    println("  Cost: ${totalCostAtNight} kr")
+    println("  CO2: ${totalCO2AtNight}g")
+    println("  💰 You save: ${savings} kr")
+    println("  🌱 You save: ${co2Savings}g CO2")
+}
+
+// ============================================
+// DISCUSSION QUESTIONS:
+// ============================================
+// 1. What happens if the company wants to add 10 more appliance types?
+//    (Air conditioner, pool pump, sauna, electric heater, etc.)
+//
+// 2. The calculation logic for "should I run this?" is copy-pasted 5 times.
+//    What's the problem with that?
+//
+// 3. All the data is public (no var/val protection). Could users
+//    accidentally break something? What about malicious code?
+//
+// 4. Some appliances have special properties (oven has temperature,
+//    car charger has battery %). How would you organize this?
+//
+// 5. The company wants to add a "start()" and "stop()" method for all
+//    appliances. How much code would you need to write now?
+//
+// 6. What if users want to customize the price thresholds (1.5 kr, 2.0 kr)?
+//    Right now they're hardcoded everywhere!
+//
+```
+
+
 
