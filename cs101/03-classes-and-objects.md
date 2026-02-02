@@ -21,7 +21,6 @@
 ## In class considerations
 
 - Det var lidt meget med også feedback på opgaver. 
-- Getter og setter blev lidt messy. Måske ikke undervise det næste gang. 
 - This var også sådan lidt semi. Behøves vi undervise det?
 
 -->
@@ -36,17 +35,16 @@
   - [https://heart2heart.website/](https://heart2heart.website/)
   - [https://www.instagram.com/reel/DT0T9F3DFKW/](https://www.instagram.com/reel/DT0T9F3DFKW/)
   - [https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/](https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/)
-
 - Peer instruction
 - Model Smartphone
-  - Getter setter
-    - Var, val
-    - Price cannot be less than 0
-    - priceInEuros attribute
-  - Constructor
+  - Først lav attributter (brand, price, batteryPercentage). Dernæst constructor
+  - Primary Constructor
   - Data vs behaviour
+    - `getDiscount` function
+  
   - toString
   - Briefly mention `this`!
+  
 - Classes are blueprints
 
 
@@ -354,7 +352,7 @@ Now call the method on the two cat objects.
 
 Create the classes modelling the following objects. Add both some relevant attributes and some relevant methods
 
-Think about what should go into the constructor and what should be set as attributes
+Think about what should go into the primary constructor and what should be set as attributes
 
 Think about what is data and what is behavior
 
@@ -375,7 +373,7 @@ Requirements:
 - Properties:
   - `name: String`
   - `price: Double`
-    - Setter: price cannot be negative (clamp to 0)
+    - Price cannot be negative (look into `getter` and  `setter`!)
 - Function:
   - `applyDiscount(percent: Int)` where 10 means 10%
 
@@ -384,6 +382,18 @@ Create a `Product` and print it. Then apply the discount, then print it again.
 
 
 ### 📝 Exercise 3.1 - level 2
+
+1. Først kig koden igennem individuelt
+2. Forklar hvad koden gør for din sidemakker
+   1. Brug de korrekte tekniske termer. Prøv at hjælpe hinanden med at være præcise i jeres sprog!
+3. Sammen skal i foreslå nogle ændringer til koden. 
+   1. Hvor kan den forbedres?
+   2. Kan i lide måden koden virker? 
+   3. Hvad kan i ikke lide, etc. 
+   4. Dan en mening om koden. Smag på koden, hvad kan den, hvad kan den ikke
+
+4. Implementer de foreslåede ændringer
+5. Lad os sammen snakke om koden
 
 ```kotlin
 class User(name: String, age: Double) {
@@ -447,20 +457,7 @@ fun main() {
     account.balance = -100.0
     println(account)
 }
-
 ```
-
-1. Først kig koden igennem individuelt
-2. Forklar hvad koden gør for din sidemakker. 
-   1. Brug de korrekte tekniske termer. Prøv at hjælpe hinanden med at være ultrapræcise i jeres sprog!
-3. Sammen skal i foreslå nogle ændringer til koden. 
-   1. Hvor kan den forbedres?
-   2. Kan i lide måden koden virker? 
-   3. Hvad kan i ikke lide, etc. 
-   4. Dan en mening om koden. Smag på koden, hvad kan den, hvad kan den ikke
-
-4. Implementer de foreslåede ændringer
-5. Lad os sammen snakke om koden
 
 
 
@@ -492,16 +489,3 @@ Create a menu where a user can
 - Create a `TodoItem`
 - Check out a `TodoItem`
 - Remove a `TodoItem`
-
-
-
-
-
-
-
-- I want to make an app where i each day get a notification to do a task i specify
-  I should be able to
-  - Set when the notification should appear
-  - Have a clear overview per week of the days i have completed the task
-  - Should be able to confirm that i have done the task
-  - The task should have a name
