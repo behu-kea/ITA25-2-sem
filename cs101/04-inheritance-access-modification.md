@@ -17,15 +17,23 @@
   -  Survival MMO https://github.com/behu-kea/ita24-2sem-code/blob/main/inheritance/app/src/main/java/com/example/inheritance/main.kt
     -  They all have private energy
   
-    -  Survivor - name. fightZombies
-
-    -  TheLeader - name, bravery, motivateTeam(), is secretelyTerrified
-  
-    -  TheMedic - numberOfMedKits, healSurvivor()
-  
-    -  TheGuyWhoAlwaysDiesFirst, tripchance, sayLastWords() <- Lad os spørge chatGPT
+    -  Survivor base class
+       -  name, health
     
-  -  **Abstraction** - Abstraction means abstracting away certain details. `hitApi('www.kealanparr.com', HTTPMethod.Get)`This function we dont need to know how it is implemented because we know how to work with it
+       -  fight()
+    
+    -  TheLeader
+       -  bravery
+    
+       -  motivateTeam()
+    
+       -  is secretelyTerrified
+    
+    -  TheGuyWhoAlwaysDiesFirst
+       -  tripchance
+       -  sayLastWords() <- Lad os spørge chatGPT
+    
+  -  **Abstraction** - Abstraction means abstracting away certain details. `hitApi('www.kealanparr.com', HTTPMethod.Get)`This function we dont need to know how it is implemented because we know how to work with it. Abstraction = exposing *what* an object can do, while hiding *how* it does it.
   -  **Encapsulation** - The action of enclosing something in or as if in a capsule. Removing access to parts of your code and making things private is exactly what **Encapsulation** is all about
   -  **Inheritance** - Inheritance is a fundamental concept in object-oriented programming  where a new class (subclass) can inherit properties and behaviors from  an existing class (superclass). This allows for code reusability and promotes organization
   -  **Polymorphism** - The condition of occurring in several different forms. More concretely an object will behave differently based on the context it is called from
@@ -326,15 +334,15 @@ fun main() {
 
 ### Opgave 1
 
-I skal forestille jer at arbejde på en formidlingskanal om softwareudvikling. Denne kanal skal lave en video der handler om 4 pillars of OOP. I skal producere denne video. Hvilken platform i vil producere til er lige meget. 
+I skal forestille jer at arbejde på en formidlingskanal om softwareudvikling. Denne kanal skal lave en video der handler om 4 pillars of OOP. I skal producere denne video. Hvilken platform i vil producere til er op til jer. 
 
 Målgruppen er unge i alderen 18-25 der har udviklet software før. 
 
-Hvordan i laver videoen er helt op til jer, i må gerne dele opgaven op i jeres gruppe. 
+Hvordan i laver videoen er helt op til jer
 
-I har til kl 10:45.
+I har til kl 10:45
 
-I kan (men behøves ikke) bruge opgaverne nedenfor til at lære koncepterne bedre
+I kan (men behøves ikke) bruge opgaverne nedenfor til at lære koncepterne bedre. 
 
 
 
@@ -438,7 +446,7 @@ Genereret af Claude Code
 // 
 // YOUR MISSION:
 // 1. READ the code and understand what it does
-// 2. DISCUSS in groups: What are the problems? (15 min)
+// 2. DISCUSS in groups: What are the problems?
 // 3. IDENTIFY which OOP principles are violated
 // 4. REFACTOR the code using the 4 pillars of OOP
 //

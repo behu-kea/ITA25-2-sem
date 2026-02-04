@@ -33,24 +33,13 @@
 
 - Federe lokaler gruppe
 
+- Imorgen første online klasse
+
 - Vi har landet det næste projekt og jeg tror i vil synes det er fedt
   - [https://heart2heart.website/](https://heart2heart.website/)
   - [https://www.instagram.com/reel/DT0T9F3DFKW/](https://www.instagram.com/reel/DT0T9F3DFKW/)
   - [https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/](https://www.instagram.com/heart2heart_dk/reel/DUBMYGtDEiv/)
   
-- Peer instruction
-
-- Model Smartphone
-  - Først lav attributter (brand, price, batteryPercentage). Dernæst constructor
-  - Primary Constructor
-  - Data vs behaviour
-    - `getDiscount` function
-  
-  - toString
-  - Briefly mention `this`!
-  
-- Classes are blueprints
-
 - Feedback from handin
 
   - Godt klaret generelt. Jeg kan virkelig se at i har løse opgaverne selv, det skal i have ros for. Jeg ser ingen spor af AI faktisk. 
@@ -96,13 +85,10 @@
 
     - ```kotlin
       val numbersDividedBy3 = element % 3 == 0
-              val numbersDividedBy5 = element % 5 == 0
+      val numbersDividedBy5 = element % 5 == 0
       
-      
-              if (numbersDividedBy3 == true && numbersDividedBy5 == true) {
+      if (numbersDividedBy3 && numbersDividedBy5) {
       ```
-
-  - `calculateGrade` lugter af when
 
   - Lav en lambda her
 
@@ -118,13 +104,11 @@
 
     - ```kotlin
       fun getCPRCheckValidity(cprNr: String): Boolean {
-      
           val birthDay = cprNr.substring(0, 2).toInt()
           val birthMonth = cprNr.substring(2, 4).toInt()
       
           if (cprNr.length != 10) return false
           return birthDay in 1..31 && birthMonth in 1..12
-      
       }
       ```
 
@@ -141,6 +125,7 @@
       ```
 
     - Hvis lambda:
+
       ```kotlin
       val calculateGrade: (Int) -> Char = {
               when (it) {
@@ -152,6 +137,19 @@
           }
       }
       ```
+
+- Model Smartphone
+  - Først lav attributter (brand, price, batteryPercentage). Dernæst constructor
+  - Primary Constructor
+  - Data vs behaviour
+    - `getDiscount` function
+  
+  - toString
+  - Briefly mention `this`!
+  
+- Classes are blueprints
+
+- Peer instruction
 
 
 
@@ -183,6 +181,7 @@ class MyClass {
 }
 
 fun main() {
+ 
     val myObj = MyClass()
     println(myObj.x)
 }
@@ -486,7 +485,7 @@ Create a `Product` and print it. Then apply the discount, then print it again.
 
 
 
-### 📝 Exercise 3.1 - level 2
+### 📝 Exercise 3.1 - level 2 kl 11
 
 1. Først kig koden igennem individuelt
 2. Forklar hvad koden gør for din sidemakker

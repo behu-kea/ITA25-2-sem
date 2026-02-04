@@ -12,6 +12,12 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
 
 
 
+## Overblik
+
+- Gå tidligt, det skaber dårlig incitament!
+
+
+
 ## Emnerne i skal lære:
 
 Fra studieordningen der er lidt fluffy:

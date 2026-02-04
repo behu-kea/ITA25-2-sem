@@ -35,13 +35,13 @@ Merge sort, quickSSort and bubblesort
 
 Most popular. Switches place if two elements are in the wrong order. 
 
-Has  O(n<sup>2</sup>)  time complexity worst. O(n) best 
+Has O(n<sup>2</sup>)  time complexity worst. O(n) best 
 
 
 
 ### Selection Sort
 
-For each position in the list: Finds the smallest value and swaps it to the current position of the array. 
+For each position in the list: Finds the smallest value and swaps it in front of the unsorted array.
 
 Selection sort works by finding the minimum element in an unsorted portion of the array and placing it at the beginning, then repeating this for the remaining elements.
 
