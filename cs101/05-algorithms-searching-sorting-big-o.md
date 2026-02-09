@@ -18,8 +18,8 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
 
 - TidalCycles
 
-  - https://www.instagram.com/_switch_angel/reel/DPjZLGhjXSI/
-  - https://strudel.cc/#JDogcygiW2JkIDxoaCBvaD5dKjIiKS5iYW5rKCJ0cjkwOSIpLmRlYyguNCk%3D
+  - [https://www.instagram.com/_switch_angel/reel/DPjZLGhjXSI/](https://www.instagram.com/_switch_angel/reel/DPjZLGhjXSI/)
+  - [https://strudel.cc/#JDogcygiW2JkIDxoaCBvaD5dKjIiKS5iYW5rKCJ0cjkwOSIpLmRlYyguNCk%3D](https://strudel.cc/#JDogcygiW2JkIDxoaCBvaD5dKjIiKS5iYW5rKCJ0cjkwOSIpLmRlYyguNCk%3D)
 
 - Afleveringer feedback
 
@@ -28,7 +28,7 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
   - Husk val foran attributter. Ellers bliver de ikke attributter: 
     ```kotlin
     class Employee(
-        val firstName: String,
+        private val firstName: String,
         val lastName: String,
         monthlySalary: Float
     ) {
@@ -50,7 +50,7 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
               }
       ```
 
-  - fun raise - Hvad tror i den gør?
+  - fun `raise` - Hvad tror i den gør?
 
     - 
 
@@ -78,12 +78,12 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
 
   - Tænk over typer: ` var monthlySalary: Double`
 
+- Hvorfor er det vigtigt at snakke Big O?
+
 
 
 
 ## Emnerne i skal lære:
-
-
 
 
 
@@ -204,7 +204,7 @@ Ud af det her skal i lave en læringsplan:
 - Hvad vil i lære idag?
 - Hvad skal i lære imorgen?
 - Er der hjemmearbejde?
-- Er der forberedelse til imorgen?
+- Er der forberedelse til onsdag?
 
 
 
