@@ -14,7 +14,72 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
 
 ## Overblik
 
-- Gå tidligt, det skaber dårlig incitament!
+- Pas på med at gå tidligt, det skaber en dårlig kultur
+
+- TidalCycles
+
+  - https://www.instagram.com/_switch_angel/reel/DPjZLGhjXSI/
+  - https://strudel.cc/#JDogcygiW2JkIDxoaCBvaD5dKjIiKS5iYW5rKCJ0cjkwOSIpLmRlYyguNCk%3D
+
+- Afleveringer feedback
+
+  - Rigtig fint helt generelt
+
+  - Husk val foran attributter. Ellers bliver de ikke attributter: 
+    ```kotlin
+    class Employee(
+        val firstName: String,
+        val lastName: String,
+        monthlySalary: Float
+    ) {
+    ```
+
+  - Tænk over private og public attributter!
+
+  - Man kan bruge setter:
+
+    - ```kotlin
+      class Employee(
+          var firstname: String,
+          var lastname: String,
+          salary: Int
+      ) {
+          var salary = salary
+              set(value) {
+                  field = if (value < 0) 0 else value
+              }
+      ```
+
+  - fun raise - Hvad tror i den gør?
+
+    - 
+
+    ```kotlin
+    fun raise(raise: Int) {
+            val result = (salary * raise / 100)
+            salary += result
+            println("$firstname får nu $result kr mere i løn. total løn nu: $salary")
+        }
+    ```
+
+  - Hvad tror i den her gør: `tenPercentYearlyRaise`
+
+    - ```kotlin
+      fun tenPercentYearlyRaise(){  
+              val yearlyIncrease: Double = yearlySalary * 1.10  
+              println("Boss: Congrats $firstName $lastName on your raise with 10%, you're salary is now $yearlyIncrease be grateful")  
+        
+          }  
+      ```
+
+  - Det her er lidt frækt: `  override fun calculatePerimeter(): Double = 2 * PI * radius`
+
+  - Pas på med at overkomplicere jeres kode: `companion object {`
+
+  - Tænk over typer: ` var monthlySalary: Double`
+
+  - 
+
 
 
 
