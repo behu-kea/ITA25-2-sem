@@ -78,12 +78,14 @@ I skal selv vurdere hvordan i mest effektivt lærer punkterne herunder. Jeg er d
 
   - Tænk over typer: ` var monthlySalary: Double`
 
-  - 
-
 
 
 
 ## Emnerne i skal lære:
+
+
+
+
 
 Fra studieordningen der er lidt fluffy:
 
@@ -148,6 +150,10 @@ Søgning
 - Hvordan fungerer binær søgning, og hvorfor er den hurtigere end lineær søgning på sorterede lister?
 - Hvilke forudsætninger skal være opfyldt for at kunne bruge binær søgning?
 - Hvad er tidskompleksiteten for binær søgning, og hvordan udledes den?
+
+
+
+Jeg har lavet en minEksamen her i kan prøve: [https://mineksamen.dk/live?id=52](https://mineksamen.dk/live?id=52)
 
 
 
