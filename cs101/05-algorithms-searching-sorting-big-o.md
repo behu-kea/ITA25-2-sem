@@ -212,7 +212,7 @@ Ud af det her skal i lave en læringsplan:
 
 
 
-### Udførsel - indtil 11:15
+### Udførsel - indtil 15:15
 
 - Hvordan lærer vi i vores gruppe stoffet bedst? 
 
@@ -227,11 +227,11 @@ Ud af det her skal i lave en læringsplan:
 
 
 
-### Pause 10 - 10:15
+### Pause 14 - 14:15
 
 
 
-### Refleksion i gruppen - 11:15 - 11:30
+### Refleksion i gruppen - 15:15 - 15:30
 
 - Hvad lærte i af det? 
 - Hvad fungerede godt?
@@ -242,7 +242,7 @@ Ud af det her skal i lave en læringsplan:
 
 
 
-### Fælles på klassen - 11:30 - 11:45
+### Fælles på klassen - 15:30 - 15:45
 
 - Hvilken refleksion havde i i grupperne?
 - Hvad skal i lave imorgen? 
