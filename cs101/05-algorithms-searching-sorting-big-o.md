@@ -159,11 +159,11 @@ Jeg har lavet en minEksamen her i kan prøve: [https://mineksamen.dk/live?id=52]
 
 Vis at man kan snakke med ChatGPT om det her. 
 
-- https://chatgpt.com/c/67a48729-3b1c-8008-83ca-dedfaa092c96
-- https://chatgpt.com/c/67a489bb-4e04-8008-b44c-44a4326642d9
-- https://chatgpt.com/c/67a21569-cb70-8008-b263-2406ab7a3daa
-- https://chatgpt.com/c/67a1feaf-9810-8008-861e-0020880baaf6
-- https://chatgpt.com/c/67a1fac2-1b6c-8008-89df-8c617f7ee952
+- [https://chatgpt.com/c/67a48729-3b1c-8008-83ca-dedfaa092c96](https://chatgpt.com/c/67a48729-3b1c-8008-83ca-dedfaa092c96)
+- [https://chatgpt.com/c/67a489bb-4e04-8008-b44c-44a4326642d9](https://chatgpt.com/c/67a489bb-4e04-8008-b44c-44a4326642d9)
+- [https://chatgpt.com/c/67a21569-cb70-8008-b263-2406ab7a3daa](https://chatgpt.com/c/67a21569-cb70-8008-b263-2406ab7a3daa)
+- [https://chatgpt.com/c/67a1feaf-9810-8008-861e-0020880baaf6](https://chatgpt.com/c/67a1feaf-9810-8008-861e-0020880baaf6)
+- [https://chatgpt.com/c/67a1fac2-1b6c-8008-89df-8c617f7ee952](https://chatgpt.com/c/67a1fac2-1b6c-8008-89df-8c617f7ee952)
 
 
 
