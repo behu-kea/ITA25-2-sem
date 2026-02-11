@@ -2,18 +2,111 @@
 
 
 
+## AI bug
+
+På [https://mineksamen.dk/](https://mineksamen.dk/) fandt jeg en bug da jeres klasse begyndt at bruge toolet 😱
+
+<!--
+
+Lad mig først forklare hvordan en eksamen forløber på mineksamen:
+
+1. Når en bruger trykker på `Start eksamen` bliver der oprettet en række i `exam_logs`. Den bliver oprettet med et `created_at` tidspunkt
+2. Når brugeren klikker på `Afslut eksamen` opdaterer jeg den række i `exam_logs` med `finished_at`, `finished_reason`, `feedback` og `grade`. Så med andre ord gemmer jeg karakteren, feedback, hvornår eksamen blev aflsluttet og hvorfor. I kan se `exam_logs nedenfor`
+
+
+
+![supabase](assets/CleanShot-2026-02-10-at-10.56.43.png)
+
+
+
+Nu kommer buggen så! Jeg kunne se at en studerende en dag havde fået et 7 tal, men dagen efter havde han taget en ny eksamen hvor han havde fået 10. Problemet var bare at han den eksamen hvor han havde fået 7 stod nu pludselig som 10. Når man har fået en karakter skal den aldrig kunne laves om. Der var altså en bug. 
+
+**Hvad tror i buggen var? Hvordan ville i debugge det?**
+
+
+
+Her er koden hvor fejlen var:
+
+```typescript
+await supabase
+  .from("exam_logs")
+  .update({
+    finished_at: new Date().toISOString(),
+    finished_reason: finishedReason,
+    grade: grade,
+    feedback: feedback,
+  })
+  .eq("user_id", userId)
+  .eq("examID", examId);
+```
+
+**Hvad tror i nu fejlen er?**
+
+
+
+UI der viser hvordan mineksamen ser ud fra en undervisers perspektiv
+
+![CleanShot-2026-02-10-at-11.01.12](assets/CleanShot-2026-02-10-at-11.01.12.png)
+
+
+
+Okay. Så buggen var altså at den opdaterede alle eksamenerne for en studerende på en eksamen. Men man kan jo have taget mange eksamener.
+
+
+
+Jeg spurgte om AI ikke ville komme med en løsning til problemet. Her er hvad den forslog (jeg har desværre ikke samtalen længere, ellers ville jeg have taget screenshots derfra). Kun opdater den seneste eksamen
+
+```typescript
+const { data: latestExam } = await supabase
+  .from("exam_logs")
+  .select("id")
+  .eq("examID", examId)
+  .order("created_at", { ascending: false })
+  .limit(1)
+  .single();
+
+await supabase
+  .from("exam_logs")
+  .update({
+    finished_at: new Date().toISOString(),
+    finished_reason: finishedReason,
+    grade: grade,
+    feedback: feedback,
+  })
+  .eq("id", latestExam.id);
+```
+
+**Hvad synes i om den approach? Hvad er fordele ulemper?**
+
+
+
+Her er hvad jeg gjorde:
+
+```typescript
+await supabase
+  .from("exam_logs")
+  .update(updates)
+  .eq("id", examLogId);
+```
+
+-->
+
+
+
 ## Overview
 
 - [https://www.youtube.com/ariathome](https://www.youtube.com/ariathome)
 - Viewmodel statehoisting recap
   - Start med `forEach`
 - Intro til Supabase
-  - Create a new database with a collection and a document
-- ORM
-  - ![Decoding ORM: A Deep Dive into Object-Relational Mapping - DEV Community](assets/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhh18qd6898k7ak3fmvan-20250327132344721.jpg)
+  - Open source postgres database
+
+- RLS
+- Supabase med Kotlin
+  - [Getting started](https://supabase.com/docs/guides/getting-started/quickstarts/kotlin)
+  - [https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin](https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin)
 
 - Benjamin laver en app der kan gemme data
-- Ane præsenterer hendes app struktur
 - Arbejd med opgaver
 - Pause kl 10
 - Studenterpræsentation kl 11:30

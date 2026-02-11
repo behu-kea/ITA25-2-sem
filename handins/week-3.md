@@ -6,10 +6,6 @@
 
 
 
-- Collections
-
-
-
 ### **1.**
 
 Write a class: *Article*

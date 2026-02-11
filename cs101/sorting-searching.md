@@ -41,9 +41,11 @@ Has O(n<sup>2</sup>)  time complexity worst. O(n) best
 
 ### Selection Sort
 
+[https://www.youtube.com/watch?v=g-PGLbMth_g](https://www.youtube.com/watch?v=g-PGLbMth_g)
+
 For each position in the list: Finds the smallest value and swaps it in front of the unsorted array.
 
-Selection sort works by finding the minimum element in an unsorted portion of the array and placing it at the beginning, then repeating this for the remaining elements.
+Selection sort works by finding the minimum element in an unsorted portion of the array and then swapping those two values, then repeating this for the remaining elements.
 
 
 
