@@ -22,7 +22,7 @@
   * [06 - Data from the internet - Retrofit](applikationsudvikling/06-data-from-internet-retrofit.md)
   * [07 - Concurrency & Retrofit in Android](applikationsudvikling/07-concurrency-retrofit-android.md)
   * [08 - Github & branching & Readme & recap](applikationsudvikling/08-github-branching-readme-recap.md) 
-  * [09 - Firebase Cloud Firestore](applikationsudvikling/09-firebase-cloud-firestore.md)
+  * [09 - Supabase](applikationsudvikling/09-supabase.md)
   * [10 - Testing](applikationsudvikling/12-testing.md)
   * [11 - Shape kommer forbi](applikationsudvikling/11-shape.md)
   * [12 - Working with sensors](applikationsudvikling/10-sensors.md)

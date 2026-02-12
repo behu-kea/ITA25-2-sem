@@ -102,6 +102,7 @@ await supabase
   - Open source postgres database
 
 - RLS
+- Repositories pattern
 - Supabase med Kotlin
   - [Getting started](https://supabase.com/docs/guides/getting-started/quickstarts/kotlin)
   - [https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin](https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin)
@@ -114,31 +115,6 @@ await supabase
 
 
 
-<!--
-
-## After class consideration
-
-- Idag var alt for svær. Opgaven med konsulenten var for tricky.
-- De skulle bare have fået success med firebase og firestore til at begynde med
-
--->
-
-
-
-[Getting started with Android and Supabase](https://www.youtube.com/watch?v=_iXUVJ6HTHU)
-
-Ingen ORM med supabase
-
-
-
-
-
-
-
-
-
-
-
 ## Exercise
 
 Der er to slags opgaver idag. Den første er fokuseret på at i skal have forbindelse til Firestore og lave nogle simple ting med det. 
@@ -147,7 +123,15 @@ Den anden del fokuserer på hvordan man ville bruge Firestore i et mere "profess
 
 
 
-### Opgave 3 - Todoist's Nye Notes-App Eventyr!
+### Opgave 1
+
+Lav en app der kan hente, oprette, slette og opdatere en bestemt type entiteter: Eksamener, Fodboldhold, Patienter, Træningsprogram. Det er sådan set lige meget, bare noget i finder interessant. Hvordan i gør det er op til jer. 
+
+Vær obs på jeres RLS!
+
+
+
+### Opgave 2 - Todoist's Nye Notes-App Eventyr!
 
 **Arbejd i studiegrupper!**
 
@@ -155,11 +139,13 @@ Godt gået med Todo-listen! Michael var *så* begejstret for jeres arbejde med C
 
 Nu har Michael og Todoist fået blod på tanden og vil udvide deres produktportefølje. De vil bygge en **Notes-app**! De har fået fingrene i et eksisterende projekt fra en (nu opkøbt) konkurrent. Dette projekt *skulle* efter sigende være bygget med en mere "professionel" arkitektur fra  starten. Michael er dog lidt skeptisk efter sidste oplevelse og vil gerne have *jer*, hans favorit-konsulenter, til at kigge på det.
 
-"Det ser pænere ud ved første øjekast," siger Michael, "men jeg har på  fornemmelsen, at der lurer problemer under overfladen. Og vi mangler  altså nogle helt basale funktioner! Kan I hjælpe os med at få styr på  denne her Notes-app, så den lever op til Todoist-standarden?"
+"Det ser pænere ud ved første øjekast," siger Michael, "men jeg har på  fornemmelsen, at der lurer problemer under overfladen. Og vi mangler altså nogle helt basale funktioner! Kan I hjælpe os med at få styr på  denne her Notes-app, så den lever op til Todoist-standarden?"
 
 Prototypen til den nye Notes-app kan findes her: [https://github.com/behu-kea/note-app](https://www.google.com/url?sa=E&q=https%3A%2F%2Fgithub.com%2Fbehu-kea%2Fnote-app)
 
 Michael nævner også, at denne app bruger noget fancy "Firestore" til at gemme data i skyen.
+
+
 
 ### Klargøring til Konsulentarbejdet
 
