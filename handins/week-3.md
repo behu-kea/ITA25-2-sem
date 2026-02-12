@@ -12,7 +12,7 @@ Write a class: *Article*
 
 - An article has an author and a title
 
-Create 5 articles, add them into an ArrayList and print them by overriding the *.toString()* method
+Create 5 articles, add them into an `List` and print them by overriding the *.toString()* method
 
 
 
