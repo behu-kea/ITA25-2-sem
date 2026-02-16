@@ -149,17 +149,14 @@ Michael nævner også, at denne app bruger noget fancy "Firestore" til at gemme 
 
 ### Klargøring til Konsulentarbejdet
 
-Før I for alvor kan gå i gang med at analysere og forbedre appen, skal I have den op at køre i jeres eget udviklingsmiljø. Det kræver et par trin for at forbinde til jeres *egen* Firestore-database (så I ikke roder i Todoist's produktionsdata!):
+Før I for alvor kan gå i gang med at analysere og forbedre appen, skal I have den op at køre i jeres eget udviklingsmiljø. Det kræver et par trin for at forbinde til jeres *egen* Supabase-database (så I ikke roder i Todoist's produktionsdata!):
 
-1. Tilføje en notes Collection i din Firestore database! 
-
-![Tilføj notes collection](assets/CleanShot-2024-03-18-at-10.19.41.png)
-
-
-
-2. Tilføje det nye projekt, så projektet kan tilgå jeres database. Her skal i skrive jeres package navn og så hente `google-services.json` filen ned og overskrive den der allerede ligger i projektet!
-
-![Tilføj den nye app](assets/CleanShot-2024-03-18-at-10.19.08.png)
+1. Lav en ny tabel der hedder `notes` i Supabase. Den skal have følgende kolonner
+   1. Id: Int
+   2. Title: String
+   3. Note_text: String
+2. I `NotesRepository.kt` kopier jeres offentlige URL og KEY ind!
+3. Prøve at lave en ny note i Supabase. Den skulle gerne dukke op på jeres app!
 
 
 

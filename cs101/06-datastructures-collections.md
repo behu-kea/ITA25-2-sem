@@ -18,6 +18,92 @@
 
 
 
+## Overview
+
+Feedback på opgaver
+
+- Vi behøves ikke lave getter og setters
+
+  - ```kotlin
+    // Getters
+        fun getAuthor(): String = author
+        fun getTitle(): String = title
+        fun getDate(): LocalDate = date
+        fun getBalance(): Int = balance
+    
+        // Setters
+        fun setAuthor(newAuthor: String) {
+            author = newAuthor
+        }
+    
+        fun setTitle(newTitle: String) {
+            title = newTitle
+        }
+    ```
+
+- Navngivning: `delete`
+
+  ```kotlin
+  val RedditPosts = mutableListOf<RedditPost>()
+  
+      // Method
+      fun deleteARedditPost(index: Int){
+          // Her fjernes et reddisposts via index
+          // https://kotlinlang.org/docs/collection-write.html#removing-elements
+          RedditPosts.removeAt(index)
+      }
+  ```
+
+- Navngivning
+
+  ```kotlin
+  fun addProducts(name: String, quantity: Int){
+      products.add(Product(name, quantity))
+      }
+  ```
+
+  ```kotlin
+  fun displayInventory(){
+          products.forEach { product -> println(product.name + product.quantity) }
+      }
+  ```
+
+- Husk access modifiers!
+
+- Tænk over paramtere `fun removeProduct(name: String) {`
+
+- Lækker if!
+
+  - ```kotlin
+    fun displayInventory() {
+            if (products.isEmpty()) {
+                println("Inventar er tomt")
+            } else  {
+                for (product in products) {
+                    println(product)
+                }
+            }
+        }
+    ```
+
+- `fun deletePostByIndexNumber(index: Int) {`
+
+- Lav jeres klasser som seperate filer
+
+- ```kotlin
+   var article5 = Article("Per Mission", "Hvordan Jeg Mistede Mine Semikoloner (og Fandt Kotlin")
+  
+      //opretter en tom liste
+      val articleList: MutableList<String> = mutableListOf()
+  
+      // tilføjer artiklerne én ad gangen
+      articleList.add(article1.toString())
+  ```
+
+- 
+
+
+
 ## Learning goals
 
 - Collections
