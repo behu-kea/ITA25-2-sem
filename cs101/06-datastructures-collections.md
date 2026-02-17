@@ -12,7 +12,14 @@
 
 ## Afterclass consideration
 
-- Slidsene var okay, men mangler noget implementation
+- Det sejlede lidt idag. Jeg var ikke helt skarp i de forskellige emner
+  - Fx med hashMap vs Map. 
+  - Big O af af indsætte element i midten af en linkedList
+  - Kan man få fat i en element i en set
+  - At keys i en linkedHashSet fx  beholder den rækkefølge de blev indsat i
+
+- SpaceLog var en stener opgave det samme med dictionary opgaven.
+- Dem med datastrukturer var gode, men der må gerne være nolge lidt sværere til sidst, hvor det er svært at sige hvilken datastruktur man skal vælge
 
 -->
 
