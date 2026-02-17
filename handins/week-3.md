@@ -60,7 +60,7 @@ When a new instance of RedditPost is instantiated:
 
 
 
-Ensure all attributes are private, but accesible by getters & setters.
+Ensure all attributes are private
 
 Implement functionality such that redditposts can be sorted by upvotes/downvotes
 
@@ -104,8 +104,9 @@ open class Vehicle(
     var brand: String,
     var speed: Int
 ) {
+  private val speedIncrement = 10;
     fun accelerate() {
-        speed += 10
+        speed += speedIncrement
         println("$brand speeds up to $speed km/h")
     }
 
@@ -117,11 +118,15 @@ open class Vehicle(
 class Car(
     brand: String,
     speed: Int,
-    var fuelLevel: Int
+    private var fuelLevel: Int
 ) : Vehicle(brand, speed) {
-
+		private val fuelIncrement = 5
     override fun honk() {
         println("$brand goes: HONK HONK!")
+    }
+  
+    fun decreaseFuel() {
+      fuelLevel -= fuelIncrement
     }
 }
 
@@ -148,7 +153,8 @@ class TrafficManager {
             v.accelerate()
 
             if (v is Car) {
-                v.fuelLevel -= 5
+              	v.decreaseFuel() 
+              
                 println("${v.brand} fuel left: ${v.fuelLevel}")
             }
 
