@@ -6,7 +6,11 @@ I dag skal i arbejde i studiegrupper
 
 ## Overview
 
-- 10 min - Først sæt en streg ved det emne i har svært ved i [det her dokument](https://studkea-my.sharepoint.com/:w:/g/personal/behu_kea_dk/ERh-tU3hKjZOk5d9c6SAVT8Bcf8CYCZC4gXsWNtHE2blrg?e=xeaZL8) (I skal være logget ind)
+Husk at vi bytter stil imorgen!
+
+
+
+- 10 min - Først sæt en streg ved det emne i har svært ved i [det her dokument](https://ek.itslearning.com/ContentArea/ContentArea.aspx?LocationID=7574&LocationType=1&TextURL=%2fLearningToolElement%2fViewLearningToolElement.aspx%3fLearningToolElementId%3d1493793) (I skal være logget ind)
 - 30-45 min - Rapid fire: Jeg går igennem de emner der er flest streger ved.
   - I stiller spørgsmål imens
 - 45 min - Arbejde i breakout grupper. Får tildelt emne i skal arbejde med. 
