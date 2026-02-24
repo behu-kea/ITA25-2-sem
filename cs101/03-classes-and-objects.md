@@ -269,13 +269,13 @@ This way of setting attributes is a bit cumbersome. Lets learn about the constru
 To get values into the class when an object is created we use the constructor:
 
 ```kotlin
-class Dog (stamina: Int, isHappy: Boolean,home: String, energy: Int) {
+class Dog (val stamina: Int, val isHappy: Boolean, val home: String, val energy: Int) {
 }
 ```
 
 This will create a `Dog` class with 4 attributes. 
 
-This part `(stamina: Int, isHappy: Boolean,home: String, energy: Int)` is called the primary constructor. It is used to initialize the class with parameters.
+This part `(val stamina: Int, val isHappy: Boolean, val home: String, val energy: Int)` is called the primary constructor. It is used to initialize the class with parameters.
 
 We can now create a `Dog` with specific attributes set to it
 
@@ -296,7 +296,7 @@ skippy.stamina = 10;
 We can also set default values in our primary constructor:
 
 ```kotlin
-class Dog (val stamina: Int = 20, isHappy: Boolean,home: String, energy: Int) {
+class Dog (val stamina: Int = 20, val isHappy: Boolean, val home: String, val energy: Int) {
 }
 ```
 
@@ -307,7 +307,7 @@ class Dog (val stamina: Int = 20, isHappy: Boolean,home: String, energy: Int) {
 If you want fx `stamina` to be read use the `val` keyword
 
 ```kotlin
-class Dog (val stamina: Int, isHappy: Boolean,home: String, energy: Int) {
+class Dog (val stamina: Int, val isHappy: Boolean, val home: String, val energy: Int) {
 }
 ```
 
@@ -326,7 +326,7 @@ If you want `stamina` to be changed, use the `var` keyword.
 
 
 ```kotlin
-class Dog (var stamina: Int, isHappy: Boolean,home: String, energy: Int) {
+class Dog (var stamina: Int, val isHappy: Boolean, val home: String, val energy: Int) {
 }
 
 fun main() {
@@ -344,7 +344,7 @@ fun main() {
 We can create a secondary constructor that is called when an object is created. We that by using an `init` block
 
 ```kotlin
-class Dog (var stamina: Int, isHappy: Boolean,home: String, energy: Int) {
+class Dog (var stamina: Int, val isHappy: Boolean, val home: String, val energy: Int) {
     init {
         println("First initializer block that prints $stamina")
     }

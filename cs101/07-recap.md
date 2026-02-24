@@ -6,7 +6,8 @@ I dag skal i arbejde i studiegrupper
 
 ## Overview
 
-Husk at vi bytter stil imorgen!
+- Husk at vi bytter stil imorgen!
+- Jeg er ved at løbe tør for sange
 
 
 
@@ -35,18 +36,22 @@ Test Feedback
 
 - Fedt:
   ```kotlin
-  fun findMax(numbers: List<Int>): Int? {
+  fun findMax(numbers: List<Int>): Int {
       // Your code here
-      return numbers.maxOrNull()
+    	if (numbers.maxOrNull() == null) {
+        return 0
+      } else {
+        numbers.maxOrNull()
+      }
   }
   ```
-
+  
 - Yes
   ```kotlin
   // Create a function that filters out negative numbers from a list.
   fun filterNegativeNumbers(numbers: List<Int>): List<Int> {
       // Your code here
-      return numbers.filter { it > 0 }
+      return numbers.filter{ it > 0 }
   }
   ```
 
@@ -74,11 +79,7 @@ Test Feedback
 - Kan optimeres
   ```kotlin
   fun isEven(number: Int): Boolean {
-      if (number % 2 == 0) {
-  
-          return true
-  
-      } else return false
+      return number % 2 == 0
   }
   ```
   
@@ -126,8 +127,7 @@ Test Feedback
 - 10 min - Først sæt en streg ved det emne i har svært ved i [det her dokument](https://ek.itslearning.com/ContentArea/ContentArea.aspx?LocationID=7574&LocationType=1&TextURL=%2fLearningToolElement%2fViewLearningToolElement.aspx%3fLearningToolElementId%3d1493793) (I skal være logget ind)
 - 30-45 min - Rapid fire: Jeg går igennem de emner der er flest streger ved.
   - I stiller spørgsmål imens
-- 45 min - Arbejde i breakout grupper. Vælger emne i har sværest ved i gruppen
-- Pause
+- 45 min - Arbejde i grupper. Vælger emne i har sværest ved i gruppen. Lav 5 minutters præsentation
 - 10 min Fælles på klassen. Nogle grupper præsenterer hvad de har lært, tips og gotchas
 - 45 min - Arbejde i breakout grupper. Får tildelt nyt emne.
 - Fælles på klassen
