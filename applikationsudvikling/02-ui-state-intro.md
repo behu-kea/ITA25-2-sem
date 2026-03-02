@@ -8,16 +8,13 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 
 - State
 - Handle input in textField
-- Trailing lambda
 
 
 
 ## Overview
 
-- Konteksten semestret
-- Vis constructor med Student hvor grades er i constructor. Ift hvad man bruger constructor til
 - Me coding a Currency converter
-  - Talk about remember
+  - Talk about remember, mutableStateOf, recomposition
 
 - Præsenation af case for idag
 - By keyword: [https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207](https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207)
@@ -34,6 +31,8 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 - Vejnummer
 
 -->
+
+
 
 ![CleanShot-2024-03-06-at-12.40.36](assets/CleanShot-2024-03-06-at-12.40.36.png)
 
