@@ -14,7 +14,7 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 ## Overview
 
 - Me coding a Currency converter
-  - Talk about remember, mutableStateOf, recomposition, logd
+  - Talk about remember, mutableStateOf, recomposition, load
 
 - Præsenation af case for idag
 - By keyword: [https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207](https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207)
@@ -188,8 +188,6 @@ A composable that uses `remember` to store an object creates internal state, mak
 
 
 
-<!--
-
 ## Magisk lommeregner
 
 Vi skal lave en magisk lommeregner der kan hjælpe med et trylle trick der virkelig kan imponere
@@ -335,7 +333,7 @@ Hvordan får brugeren indtastet telefonnummeret? Igen brainstorm og vælg den ne
 
 Kan du få lommeregneren til at ligne en rigtig lommeregner?
 
--->
+
 
 <!--
 
