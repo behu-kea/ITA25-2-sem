@@ -14,7 +14,7 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 ## Overview
 
 - Me coding a Currency converter
-  - Talk about remember, mutableStateOf, recomposition
+  - Talk about remember, mutableStateOf, recomposition, logd
 
 - Præsenation af case for idag
 - By keyword: [https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207](https://chat.openai.com/share/f89b4c49-03ba-4091-b503-11ce13a91207)
