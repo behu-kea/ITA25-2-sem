@@ -5,14 +5,10 @@
 ## Overview
 
 - Snakke om eksamen. 
-- Snakke om IT-arkitektur.
-  - Planlægger designer og bygger it-systemer for virksomheder. Så de opfylder virksomhedsbehov. 
-
 - Create an idea generator app
   - `logd`
 - Password management
   - 2 factor authentication
-
 - Work on app for today
 - Break at 10:00
 - 11:30 presenation of my solution
@@ -27,7 +23,7 @@ Show the primary color theme! https://m3.material.io/theme-builder#/custom
 
 ## After class considerations
 
-- This could be made into creating a password manager and then talking about the benefits of such a password manager
+- 
 
 -->
 
@@ -79,22 +75,6 @@ fun renderUsers(users: List<String>) {
             Text(text = name)
         }
     }
-}
-```
-
-
-
-### MutableStateListOf
-
-In Jetpack Compose, `mutableStateOf` is designed to trigger  recompositions when the state object itself changes (i.e., when a new object is assigned to it). However, mutating the contents of an object  (like adding an item to a `MutableList`) does not count as a state change in this context.
-
-To make a list that works with Compose's reactive system, use `mutableStateListOf` instead. This function is observable and will trigger recompositions when items are added, removed, or updated
-
-
-
-```kotlin
-var ideas: MutableList<String> by remember {
-    mutableStateOf(mutableStateListOf())
 }
 ```
 

@@ -11,6 +11,18 @@ Compose is a declarative UI framework, meaning that you *declare* how the UI sho
 
 
 
+<!--
+
+## After class preparation
+
+- Sylvester sagde at opgaverne ikke var særligt gode. dem til forberedelse
+- Gik ellers fint. Der var en del der gik tidligt. 
+- Man kunne godt gøre det mere socialt
+
+-->
+
+
+
 ## Overview
 
 - Me coding a Currency converter
