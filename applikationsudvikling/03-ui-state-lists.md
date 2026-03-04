@@ -11,7 +11,7 @@
   - 2 factor authentication
 - Work on app for today
 - Break at 10:00
-- 11:30 presenation student application
+- 11:30 presentation student application
 
 
 
