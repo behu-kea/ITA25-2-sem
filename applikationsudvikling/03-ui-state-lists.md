@@ -5,13 +5,13 @@
 ## Overview
 
 - Snakke om eksamen. 
-- Create an idea generator app
+- Create an todo list app
   - `logd`
 - Password management
   - 2 factor authentication
 - Work on app for today
 - Break at 10:00
-- 11:30 presenation of my solution
+- 11:30 presenation student application
 
 
 
