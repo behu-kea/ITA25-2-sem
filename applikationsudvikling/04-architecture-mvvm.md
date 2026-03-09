@@ -4,6 +4,14 @@
 
 ## Learning goals
 
+- Feedback til bytte app
+  - I rammer designet rigtig godt
+  - Fedt at i har brugt klasser til noget af det!
+  - I er også begyndt at dele op i komponenter
+  - Ikke upload .mov filer. Det fedeste er youtube. I kan lave dem privat eller unlisted
+  - LazyVerticalGrid er der en del af jer der har brugt. Den er ret fed
+  - Hvor mange har brugt AI til at lave koden til interfacet?
+  
 - Clean architecture
   - Seperation of concerns
   - Clear responsibilities
@@ -27,7 +35,6 @@
 
 ## Overview
 
-- Jeg har lavet spørgsmål til eksamen
 - Benjamin viser slides og går igennem
   - Clean architecture
 
@@ -39,7 +46,6 @@
   - Nævn at der er flere måder at håndtere state på
     - `mutableStateOf`
     - `MutableStateFlow`
-- Ane præsenterer noget omkring arkitektur
 
 
 
@@ -136,6 +142,8 @@ I studiegruppen diskuter følgende:
 
 - Hvad er state hoisting og hvorfor gør vi det?
 - Hvad er MVVM
+  - Hvad står det for og hvilke forskellige dele er involveret?
+
 
 
 

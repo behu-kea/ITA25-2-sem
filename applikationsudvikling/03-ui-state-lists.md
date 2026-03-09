@@ -15,18 +15,6 @@
 
 
 
-<!--
-
-Show the primary color theme! https://m3.material.io/theme-builder#/custom
-
-
-
-## After class considerations
-
-- 
-
--->
-
 
 
 ## Preparation
@@ -216,7 +204,7 @@ Gør sådan at for hver vare, renderer du også en slet knap. Når det bliver kl
 
 ### 7 - Componentiser dit UI
 
-Lav komponenter (`@Composable`) for hvert komponent i dit interface. Husk at vi gerne vil holde komponenter stateless. 
+Lav komponenter (`@Composable`) for hvert komponent i dit interface. 
 
 
 
