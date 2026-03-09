@@ -10,7 +10,6 @@
   - I er også begyndt at dele op i komponenter
   - Ikke upload .mov filer. Det fedeste er youtube. I kan lave dem privat eller unlisted
   - LazyVerticalGrid er der en del af jer der har brugt. Den er ret fed
-  - Hvor mange har brugt AI til at lave koden til interfacet?
   
 - Clean architecture
   - Seperation of concerns
@@ -37,15 +36,10 @@
 
 - Benjamin viser slides og går igennem
   - Clean architecture
-
   - MVVM
     - Hvad er de forskellige lag
-
   - State hoisting
     - Hvordan kommer vi fra en stateful komponent over til en der er stateless?
-  - Nævn at der er flere måder at håndtere state på
-    - `mutableStateOf`
-    - `MutableStateFlow`
 
 
 
