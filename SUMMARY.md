@@ -18,7 +18,7 @@
   * [02 - UI state - Composition & State](applikationsudvikling/02-ui-state-intro.md)
   * [03 - UI state - Scrollable lists](applikationsudvikling/03-ui-state-lists.md)
   * [04 - Architecture & MVVM](applikationsudvikling/04-architecture-mvvm.md)
-  *  [04-Recap](applikationsudvikling/04-1-recap.md) 
+  *  [04-1-Recap](applikationsudvikling/04-1-recap.md) 
   * [05 - Compose navigation](applikationsudvikling/05-compose-navigation.md)
   * [06 - Data from the internet - Retrofit](applikationsudvikling/06-data-from-internet-retrofit.md)
   * [07 - Concurrency & Retrofit in Android](applikationsudvikling/07-concurrency-retrofit-android.md)
