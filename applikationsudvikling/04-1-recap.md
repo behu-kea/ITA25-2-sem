@@ -136,9 +136,9 @@ Now the last thing is to reference the state and the functions using `nameViewMo
 
 
 
-### I skal lave en fjollet app idag!
+### I skal lave en app idag!
 
-I jeres studiegrupper skal i lave en fjollet app. 
+I jeres studiegrupper skal i lave en app. Der skal være en liste af entiteter. Det kunne være `Notes`, `Bands`, `WorkoutPlans`, what ever
 
 
 
