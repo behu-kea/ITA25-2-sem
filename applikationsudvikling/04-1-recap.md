@@ -8,12 +8,135 @@
 
 - Er der emner i vil have jeg skal recappe?
 - Vise branches
-- Før pause recap
-- Vise løsningen på todo items: [https://github.com/behu-kea/note-app-mvvm/tree/solution/app/src/main/java/com/example/note_app_mvvm](https://github.com/behu-kea/note-app-mvvm/tree/solution/app/src/main/java/com/example/note_app_mvvm)
 
 
 
-## I skal lave en fjollet app idag!
+## Opgaver
+
+
+
+### State hoisting
+
+```kotlin
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            Name()
+        }
+    }
+}
+
+@Composable
+fun Name() {
+    var name by remember { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier.padding(16.dp).fillMaxWidth()
+    ) {
+        Row {
+            TextField(
+                value = name,
+                onValueChange = { name = it }
+            )
+
+            Button(onClick = { name = "" }) {
+                Text("Clear")
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text("Hello $name")
+    }
+}
+```
+
+
+
+#### 1. Hoist the state out
+
+Take `name` and move it out of the `Name` component. That means adding it to the parameter
+
+Try and call the function with the new argument in `setContent`
+
+
+
+#### 2. Hoist the `onClick` function out
+
+Add the `onClick` function as a parameter to the function
+
+Call the function
+
+
+
+#### 2. Hoist the `onValueChange` function out
+
+Add the `onValueChange` function as a parameter to the function. 
+
+**Be aware:** The lambda function should have a parameter that is a string (the new value written in the `TextField`)
+
+Call the function with the new lambda function
+
+
+
+### MVVM
+
+Now lets seperate the code into a View and a ViewModel
+
+
+
+#### View
+
+Take the composable function called `Name` and put into its own seperate file.
+
+That could be under a `package` called `components`
+
+
+
+#### ViewModel
+
+Now comes the tricky part 😱
+
+Firstly in order to get access to viewmodels we it need to install it. Please follow this guide: https://behu.gitbook.io/ita25-2-sem/applikationsudvikling/04-architecture-mvvm#installation
+
+
+
+Now we need to do two things:
+
+#### 1. Create the viewModel class
+
+Create a class called `NameViewModel`. That could be under a package called `viewModels`
+
+The `NameViewModel` should inherit from the class `ViewModel`. If you forgot how to do that, go back to the inheritance class
+
+
+
+Now move the state variable `name` into `NameViewModel`. Remember to remove `remember` part as we dont need it anymore (when our component is recomposed it does not affect the state variables in `NameViewModel`)
+
+
+
+Create two functions in the `NameViewModel` class: `onClearPressed` and `onValueChanged`
+
+The functionality of the functions should come from where the `Name` component gets called
+
+
+
+#### 2. Create an object of that `NameViewModel` class
+
+Create an object of the `NameViewModel` in the `MainActivity` under `setContent` like this:
+
+`val nameViewModel = viewModel<NameViewModel>();`
+
+Now the last thing is to reference the state and the functions using `nameViewModel`. Like fx `nameviewModel.name`
+
+
+
+
+
+### I skal lave en fjollet app idag!
 
 I jeres studiegrupper skal i lave en fjollet app. 
 

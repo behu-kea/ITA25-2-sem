@@ -8,8 +8,8 @@
   - I rammer designet rigtig godt
   - Fedt at i har brugt klasser til noget af det!
   - I er også begyndt at dele op i komponenter
-  - Ikke upload .mov filer. Det fedeste er youtube. I kan lave dem privat eller unlisted
   - LazyVerticalGrid er der en del af jer der har brugt. Den er ret fed
+  - Ikke upload .mov filer. Det fedeste er youtube. I kan lave dem privat eller unlisted
   
 - Clean architecture
   - Seperation of concerns
@@ -19,6 +19,20 @@
   - View
   - ViewModel
 - Hoisting state
+
+
+
+<!--
+
+## In class considerations
+
+- ALT SEJLEDE IDAG. 
+- Installation after appen virkede ikke
+- Det var **alt alt alt** for svært
+- Dårlige stilladseret. Dårlige videoer
+- Lav selv videoer til den her gang
+
+-->
 
 
 
