@@ -14,7 +14,7 @@
 
 ## Preparation
 
-- [ Learn Kotlin for Android: Interfaces (Lesson 20)](https://www.youtube.com/watch?v=RctW18zpgec)
+- [Learn Kotlin for Android: Interfaces (Lesson 20)](https://www.youtube.com/watch?v=RctW18zpgec)
 - https://developer.android.com/codelabs/basic-android-kotlin-compose-getting-data-internet#5
   - 4, 5, 6, 7, 8
 - [The Ultimate Retrofit Crash Course](https://youtu.be/t6Sql3WMAnk?si=RAlDRMktVSe3PAdD) - *optional*
