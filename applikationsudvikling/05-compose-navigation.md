@@ -56,7 +56,7 @@ implementation("androidx.navigation:navigation-compose:$nav_version")
 
 
 
-### 2 parts
+### 3 parts
 
 Navigation consists of 3 parts: 
 
@@ -308,67 +308,54 @@ How is navigation done in Compose UI?
 
 
 
-## 📝 Case - Recreate the Medito app
+## 📝 Case - Create the navigation for this meditation app
 
-In this case you will recreate the navigation of the Medito App. Todays focus should be on the navigation part and not the design of the app. The design can be very crude and that is fine
-
-For the case you can download the Medito app ([Link here](https://meditofoundation.org/medito-app)) or follow the screenshots below. 
-
-Medito Foundation is a nonprofit dedicated to improving mental wellbeing and helping people cope better with depression, stress, anxiety, and  any other negative states of mind. They have created a free app that gives you tons of really good meditations to try out. 
+Vis hvordan jeg har lavet UI: [https://aistudio.google.com/prompts/1VSf5hD4kf1n8eq0ljRZkojQPZdhr_OIh](https://aistudio.google.com/prompts/1VSf5hD4kf1n8eq0ljRZkojQPZdhr_OIh)
 
 
 
-### 1 - Dashboard - Level 1
+### Welcome screen
 
-First create a `Composable` that shows the dashboard. Dont focus on design, but more the content.
+### Step 1
 
-
-
-![Medito welcome screen](assets/Screenshot_20240122-133014.png)
-
-### 2 - Downloads - Level 2
-
-From the Dashboard clicking on `Downloads` should take you to this view. Again dont spend too much time on design, but more on creating a `Donwloads` `Composable` that is activated when clicking on `Downloads`
-
-![Downloads](assets/downloads.png)
-
-### 3 - Explore - Level 2
-
-Clicking on `Explore` Will take you to this view. There is a back button, a `TextField` and a list of `Meditations`
-
-Make the back button work and make the items in the list clickable. 
-
-You can simplify this by not using a `List` of meditations, but just have individual `Composable`'s on top of each other!
-
-![Explore screen](assets/Screenshot_20240122-133116.png)
-
-### 4 - Meditation group - Level 2/Level 3
-
-Clicking on one of the Meditations from above will take you to one of these views. 
-
-**Level 2** - Here you navigate to a `Composable`  fx. called `BodyScan`. You can then make individual composables for each item in the list above (or as many as see fit)
-
-**Level 3** - Make a `Composable` that is more general that can receive the clicked item. Maybe you call it `MeditationOverview`. That composable needs a title, image, description and list of meditations. Now to send these attributes as an object is not best practice, neither is sending an image: [https://stackoverflow.com/questions/67121433/how-to-pass-object-in-navigation-in-jetpack-compose](https://stackoverflow.com/questions/67121433/how-to-pass-object-in-navigation-in-jetpack-compose) More official details [here](https://stackoverflow.com/a/69060224/2263329). 
-
-So how can we fix this problem?
-
-<!-- Therefore instead when you click on a topic above, you only send the id of the topic. Then you have another `List` or `Map` that keeps track of the topics list `List<Topics>` -->
+Firstly create the welcome screen. Don't spend too much time on design. The focus here is navigation.
 
 
 
-![Screenshot_20240122-133122](assets/Screenshot_20240122-133122.png)
+### Step 2
+
+When clicking the `START MEDITATION` button the user should be navigated to the `start meditation` screen. 
 
 
 
-### 5 - Finish the app navigation
+### Step 3
 
-Clicking a meditation will take you to the meditation composable.
+When clicking one of the recent sessions the user should be taken to the meditation details screen that matches the meditation clicked on! This could be done in some different ways. The preferable is that the id of the clicked session is sent using the code above. 
 
-![Screenshot_20240122-133128](assets/Screenshot_20240122-133128.png)
+There needs to be a list of `Meditation` objects in a `viewModel`. 
+
+![Generated Image March 12, 2026 - 11_13AM(2)](assets/Generated Image March 12, 2026 - 11_13AM(2).jpg)
 
 
 
-Clicking play will take you to the player
+### Start meditation screen
 
-![Screenshot_20240122-133137](assets/Screenshot_20240122-133137-6107403.png)
+Nothing here should be interactive except from the back button. This should take the user back to the welcome screen.
 
+![Generated Image March 12, 2026 - 11_13AM(3)](assets/Generated Image March 12, 2026 - 11_13AM(3).jpg)
+
+
+
+### Meditation details screen
+
+Here the date, duration and type should come from the clicked meditation
+
+![Generated Image March 12, 2026 - 11_13AM](assets/Generated Image March 12, 2026 - 11_13AM.jpg)
+
+
+
+### Flow between screens
+
+
+
+![Generated Image March 12, 2026 - 11_12AM](assets/Generated Image March 12, 2026 - 11_12AM.jpg)
