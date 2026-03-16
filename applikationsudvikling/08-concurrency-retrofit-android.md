@@ -1,4 +1,4 @@
-# Async with coroutines & retrofit
+# Async with coroutines & retrofit - Online
 
 
 
@@ -238,9 +238,9 @@ fun ProcrastinationScreenPreview() {
 
 
 
-### Opgave 2 - Arbejd videre på din GenAI app
+### Opgave 2 -  GenAI app
 
-Arbejd videre med din GenAI app. Fokuser på repository pattern og suspend funktioner
+Arbejd videre på jeres Generativ AI app
 
 
 

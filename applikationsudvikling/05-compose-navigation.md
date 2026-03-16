@@ -28,7 +28,6 @@
   - Quick intro to benefits from meditating
   - [https://meditofoundation.org/meditations/beginner-meditation-course](https://meditofoundation.org/meditations/beginner-meditation-course)
 - Work on case. Recreate the navigation of the Medito App
-- Tænk over hvilken GenAI app i vil lave til næste gang. Vi kommer til at have 2 gange til det
 
 
 
@@ -310,6 +309,15 @@ How is navigation done in Compose UI?
 
 ## 📝 Case - Create the navigation for this meditation app
 
+I må selv bestemme om i laver meditationsappen eller om i vil arbejde på heart-2-heart appen. 
+
+Hvis i laver heart-2-heart så skal i
+
+- Lave to sider hvor i kan navigere frem og tilbage
+- Lave en tredje side hvor i kan sende noget data til.
+
+
+
 Vis hvordan jeg har lavet UI: [https://aistudio.google.com/prompts/1VSf5hD4kf1n8eq0ljRZkojQPZdhr_OIh](https://aistudio.google.com/prompts/1VSf5hD4kf1n8eq0ljRZkojQPZdhr_OIh)
 
 
@@ -359,3 +367,9 @@ Here the date, duration and type should come from the clicked meditation
 
 
 ![Generated Image March 12, 2026 - 11_12AM](assets/Generated Image March 12, 2026 - 11_12AM.jpg)
+
+
+
+## Heart-2heart app
+
+I må begynde at arbejde på jeres heart-2-heart app når i er færdige med opgaver

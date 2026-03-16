@@ -222,8 +222,6 @@ implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
 ## Opgaver
 
-Arbejd i studiegrupper i opgave 1 og 2. Gen AI opgaven er individuel
-
 
 
 ### Opgave 1 - level 1
@@ -278,9 +276,9 @@ Slet en bruger
 
 
 
-### Opgave 3 - GenAI app
+### Opgave 3 - Generativ AI app
 
-Brug gerne ChatGPT til at hjælpe jer med at konstruere jeres objekter
+Start arbejdet på en Generativ AI app
 
-I skal nu bruge et api til at lave en Generativ AI app ligesom vi gjorde sidste semester. [Her er linket](https://behu.gitbook.io/ita-24-1-semester/web-technology/17-lets-build-a-generative-ai-tool#getting-started) til apidelen. 
+
 

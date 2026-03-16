@@ -117,9 +117,9 @@ await supabase
 
 ## Exercise
 
-Der er to slags opgaver idag. Den første er fokuseret på at i skal have forbindelse til Firestore og lave nogle simple ting med det. 
+Der er to slags opgaver idag. Den første er fokuseret på at i skal have forbindelse til Supabase og lave nogle simple ting med det. 
 
-Den anden del fokuserer på hvordan man ville bruge Firestore i et mere "professionelt" setup
+Den anden del fokuserer på hvordan man ville bruge Supabase i et mere "professionelt" setup
 
 
 
@@ -131,7 +131,13 @@ Vær obs på jeres RLS!
 
 
 
-### Opgave 2 - Todoist's Nye Notes-App Eventyr!
+### Opgave 2
+
+I kan vælge at fortsætte jeres Generativ AI app eller arbejde på Todoist's casen
+
+
+
+### Todoist's Nye Notes-App Eventyr!
 
 **Arbejd i studiegrupper!**
 
@@ -176,16 +182,6 @@ Nu hvor I har adgang og kan køre appen, er det tid til at smøge ærmerne op:
 **Vigtig Note fra Michael:** "Jeg stoler på jer! Men husk nu, efter sidste omgang med den AI-genererede kode, vil bestyrelsen gerne se, at *I* tænker jer om og skriver den *nye* kode selv. Brug jeres viden om god arkitektur og kodningspraksis – det er *jer*, der er eksperterne her, ikke en eller anden chat-robot!"
 
 Held og lykke, konsulenter! Todoist regner med jer!
-
-
-
-### Firestor App
-
-Create an app that can add, get, delete and update some entities that are saved in a Firestore database. The UI does not really matter, and try not to focus too much on architecture or hoisting state and all that. 
-
-
-
-Focus on the syntax of getting Firestore to work!
 
 
 
