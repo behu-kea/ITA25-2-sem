@@ -26,7 +26,6 @@ Minimum for at bestå:
 
 - Navigation
 - Algoritmer
-- 
 
 
 

@@ -27,7 +27,7 @@
 - Small guided meditation through Medito
   - Quick intro to benefits from meditating
   - [https://meditofoundation.org/meditations/beginner-meditation-course](https://meditofoundation.org/meditations/beginner-meditation-course)
-- Work on case. Recreate the navigation of the Medito App
+- Work on case. Recreate the navigation of the medition app or Heart-2-heart
 
 
 
@@ -60,7 +60,7 @@ implementation("androidx.navigation:navigation-compose:$nav_version")
 Navigation consists of 3 parts: 
 
 1. `navhost` - Where the navigation will be displayed
-2. `navController` - controls the navigation. Fx when goin from one page to another
+2. `navController` - controls the navigation. Fx when going from one page to another
 3. `composable` - shows the different composable that can be navigated to
 
 
@@ -342,7 +342,7 @@ When clicking one of the recent sessions the user should be taken to the meditat
 
 There needs to be a list of `Meditation` objects in a `viewModel`. 
 
-![Generated Image March 12, 2026 - 11_13AM(2)](assets/Generated Image March 12, 2026 - 11_13AM(2).jpg)
+![Generated Image March 12, 2026 - 11_13AM(2)](assets/med-1.jpg)
 
 
 
@@ -350,7 +350,7 @@ There needs to be a list of `Meditation` objects in a `viewModel`.
 
 Nothing here should be interactive except from the back button. This should take the user back to the welcome screen.
 
-![Generated Image March 12, 2026 - 11_13AM(3)](assets/Generated Image March 12, 2026 - 11_13AM(3).jpg)
+![Generated Image March 12, 2026 - 11_13AM(3)](assets/med-2.jpg)
 
 
 
@@ -358,7 +358,7 @@ Nothing here should be interactive except from the back button. This should take
 
 Here the date, duration and type should come from the clicked meditation
 
-![Generated Image March 12, 2026 - 11_13AM](assets/Generated Image March 12, 2026 - 11_13AM.jpg)
+![Generated Image March 12, 2026 - 11_13AM](assets/med-3.jpg)
 
 
 
