@@ -9,6 +9,7 @@
     - Check out
     - Show via Tower
   - Pull requests
+- MinEksamen resultater
 - Modelling
 - Creating a `README.md` file
 
@@ -30,34 +31,7 @@ https://github.com/github-education-resources/teacher-toolbox/blob/main/Learning
 ## Overview
 
 - Benjamin viser hvordan man i Android studio laver branches, merger og laver en pull request
-
 - Jeg vil vise jer et andet tool jeg anbefaler. Nemlig Tower for GIT. 
-
-- UML
-
-  - Hvad er det?
-
-    - Det er et standardiseret diagram-sprog til at beskrive software-systemer visuelt.
-
-      Tænk på det som “tegninger for software”, lidt ligesom arkitekttegninger for et hus. I stedet for kun at forklare kode med tekst, kan man vise hvordan systemets dele hænger sammen.
-
-
-![What Is a UML Diagram? (Types, Examples & How to Create One)](assets/banking-uml-class-diagram.jpg)
-
-
-
-![CleanShot-2026-03-16-at-12.10.26](assets/CleanShot-2026-03-16-at-12.10.26.png)
-
-
-
-![Class Diagram Symbols: Notation and Syntax Explained with Examples, and  Best Practices | Creately](assets/uml-class-diagram-notation.webp)
-
-
-
-Programmer til at lave UML
-
-- https://app.diagrams.net/
-- https://excalidraw.com/
 
 
 
@@ -81,25 +55,7 @@ Programmer til at lave UML
 
 
 
-### Opgave 1 - Implementer følgende UML
-
-![CleanShot-2026-03-16-at-12.20.17](assets/CleanShot-2026-03-16-at-12.20.17.png)
-
-
-
-
-
-Hvis i ikke er begyndt på jeres heart-2-heart app, så begynd på den idag. 
-
-
-
-### Opgave 2 - Lav et UML diagram for jeres Heart-2-heart app
-
-I jeres heart-2-heart gruppe lav et UML diagram for jeres app.
-
-
-
-### Opgave 3 - basis setup & readme fil
+### Opgave 1 - basis setup & readme fil
 
 Lav et nyt github repo til jeres projekt, hvor der ligger et androidprojekt og en `README.md` fil
 
@@ -107,7 +63,7 @@ Lav et nyt github repo til jeres projekt, hvor der ligger et androidprojekt og e
 
 
 
-### Opgave 4 - lav et godt setup til jeres app
+### Opgave 2 - lav et godt setup til jeres app
 
 Tænk over arkitekturen. I har måske allerede noget fra sidste gang med navigation. Tænk over det følgende:
 
