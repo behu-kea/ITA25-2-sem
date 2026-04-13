@@ -12,6 +12,19 @@
 
 
 
+<!--
+
+## In class considerations
+
+- Det sejlede lidt idag. De studerende blev super forvirrede over det med Nicklas projekt hvor jeg havde skrevet reference. Og det forstår jeg egnetlig også godt. Det skal fjernes til næste gang. 
+- Stilladseringen skal være meget større i starten af opgaverne. Senere skal de blive sværere, men til at begynde med skal det bare være copy paste
+
+-->
+
+
+
+
+
 ## Preparation
 
 - [Learn Kotlin for Android: Interfaces (Lesson 20)](https://www.youtube.com/watch?v=RctW18zpgec)
