@@ -27,6 +27,7 @@
 - [https://www.youtube.com/@Fireship](https://www.youtube.com/@Fireship)
 - Go through slides
 - Opgaver
+- Kl 10:00 teacher students
 
 
 
@@ -146,8 +147,6 @@ implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
 
 
-
-
 ### Retrofit HTTP Client
 
 Retrofit is a popular HTTP client library in Kotlin that simplifies sending HTTP requests and processing API responses. It uses annotations to define the HTTP operations and converts JSON to Kotlin objects automatically.
@@ -245,6 +244,7 @@ class MainActivity : ComponentActivity() {
 						
           	// Kalde asynkron kode
             lifecycleScope.launch {
+              	// This is another example than the cats example
                 posts = retroFitInstance.apiService.getAllPosts()
             }
           
@@ -282,7 +282,7 @@ Create two `Mobile` and two `RaspberryPi` objects
 
 
 
-### Opgaver 2 - Få trænet dine Retrofit skills 🏋️‍♀️
+### Opgaver 2 - Få trænet dine Retrofit skills 🏋️‍♀️ i grupper
 
 Reference project: [https://github.com/nicklasdean/retrofit-basic](https://github.com/nicklasdean/retrofit-basic)
 
@@ -314,6 +314,12 @@ Opdater en bruger
 #### Delete request
 
 Slet en bruger
+
+
+
+### kl 10 Teacher students
+
+I skal præsentere hvordan man henter data via Retrofit
 
 
 
