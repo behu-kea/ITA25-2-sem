@@ -23,7 +23,6 @@
 
 ## Overview
 
-- Typer er vigtige: [2038 Will Be the End of Time (In the Unix 32-Bit Timecode)](https://www.youtube.com/watch?v=zZwzrlLc_oc)
 - [https://www.youtube.com/@Fireship](https://www.youtube.com/@Fireship)
 - Go through slides
 - Opgaver
@@ -317,7 +316,7 @@ Slet en bruger
 
 
 
-### kl 10 Teacher students
+### kl 14:15 Teacher students
 
 I skal præsentere hvordan man henter data via Retrofit
 
