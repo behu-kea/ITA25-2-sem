@@ -92,149 +92,38 @@ lifecycleScope.launch(Dispatchers.IO) {
 
 
 
-## Opgaver
+### Creating a delay in kotlin
 
-<!--
+To create a delay use the `delay` suspend function
 
-### Opgave 1 - Procrastination App
-
-Brug starterkoden nedenfor og implementer følgende i koden:
-
-1. **Blocking Delay:** Implementer en function ved brug af `runBlocking`, som venter 5 sekunder, før den viser en reminder.
-2. **Non-Blocking Delay:** Implementer en function ved brug af `lifecycleScope.launch` and `delay()`, som venter 5 sekunder, før den viser en reminder.
-3. **User Input:** Gør sådan at en bruger kan skrive, hvor lang tid der skal ventes, før en reminder skal vises.
-4. (Optional) Få appen til at tjekke om en task er blevet skrevet ned før den procrastinater. Er der ikke skrevet nogen task, så skal der vises en besked i 3 sekunder, som fortæller at denne ikke kan procrastinate uden en task er blevet skrevet ned.
-
-Kopier denne starterkode ind i jeres `MainActivity.kt`:
+You can try and add in inside the `setContent` of `MainActivity`
 
 ```kotlin
-package com.example.coroutines_exercise // Udskift med jeres egen package path
-  
-import android.os.Bundle  
-import androidx.activity.ComponentActivity  
-import androidx.activity.compose.setContent  
-import androidx.activity.enableEdgeToEdge  
-import androidx.compose.foundation.layout.Arrangement  
-import androidx.compose.foundation.layout.fillMaxSize  
-import androidx.compose.foundation.layout.padding  
-import androidx.compose.material3.Scaffold  
-import androidx.compose.material3.Text  
-import androidx.compose.runtime.Composable  
-import androidx.compose.ui.Modifier  
-import androidx.compose.ui.tooling.preview.Preview  
-import com.example.coroutines_exercise.ui.theme.CoroutinesexerciseTheme  
-import androidx.compose.foundation.layout.Column  
-import androidx.compose.material3.Button  
-import androidx.compose.material3.MaterialTheme  
-import androidx.compose.material3.Surface  
-import androidx.compose.material3.TextField  
-import androidx.compose.runtime.getValue  
-import androidx.compose.runtime.mutableStateOf  
-import androidx.compose.runtime.remember  
-import androidx.compose.runtime.setValue  
-import androidx.compose.ui.Alignment  
-import androidx.compose.ui.unit.dp  
-import androidx.lifecycle.ViewModel  
-import androidx.lifecycle.viewmodel.compose.viewModel  
-import kotlin.random.Random  
-  
-class MainActivity : ComponentActivity() {  
-    override fun onCreate(savedInstanceState: Bundle?) {  
-        super.onCreate(savedInstanceState)  
-        enableEdgeToEdge()  
-        setContent {  
-            CoroutinesexerciseTheme {  
-                ProcrastinationScreen()  
-            }  
-        }    }  
-}  
-  
-@Composable  
-fun ProcrastinationScreen() {  
-    val viewModel: ProcrastinationViewModel = viewModel()  
-  
-    Column(  
-        modifier = Modifier  
-            .fillMaxSize()  
-            .padding(16.dp)  
-            .padding(bottom = 100.dp),  
-        horizontalAlignment = Alignment.CenterHorizontally,  
-        verticalArrangement = Arrangement.Center  
-    ) {  
-        TextField(  
-            value = viewModel.task,  
-            onValueChange = {  
-                viewModel.updateTask(it)
-            },  
-            label = { Text("Task that needs to be done") },  
-            modifier = Modifier.padding(bottom = 16.dp)  
-        )  
-  
-        Button(onClick = {  
-            viewModel.showMessage()  
-        }) {  
-            Text("Procrastinate!")  
-        }  
-  
-        // Reminder  
-        if (viewModel.message.isNotEmpty()) {  
-            Text(  
-                text = viewModel.message,  
-                modifier = Modifier.padding(top = 16.dp)  
-            )  
-        }  
-    }  
-}  
-  
-class ProcrastinationViewModel : ViewModel() {  
-    private var _message by mutableStateOf("")  
-    val message: String get() = _message  
-  
-    private var _task by mutableStateOf("")  
-    val task: String get() = _task  
-  
-    fun updateTask(newTask: String) {  
-        _task = newTask  
-    }  
-  
-    fun showMessage() {  
-        _message = getRandomMessage()  
-    }  
-  
-    private fun getRandomMessage(): String {  
-        val messageOptions = listOf(  
-            "Hey! Remember that '[Task]' you were supposed to be doing? Yeah, time's up (sort of). Maybe just...one more cat video?",  
-            "Procrastination successful! You've successfully avoided '[Task]' for a few moments. High five! Now, maybe consider actually doing it?",  
-            "The universe has spoken. It says: '[Task]'. Just kidding... mostly. But seriously, maybe?",  
-            "Congratulations! You've unlocked the 'Few Moments Procrastination Achievement' for '[Task]'. What's next? Level 2?",  
-            "Psst... it's been a few moments. '[Task]' is still waiting for you. Don't make it sad." )  
-        val randomIndex = Random.nextInt(messageOptions.size)  
-        return messageOptions[randomIndex].replace("[Task]", _task)  
-    }  
-}  
-
-@Preview(showBackground = true)  
-@Composable  
-fun ProcrastinationScreenPreview() {  
-    ProcrastinationScreen()  
+lifecycleScope.launch {
+    Log.d("timer", "Logged before delay call")
+    // wait one second
+    delay(5000)
+    Log.d("timer", "Logged after 5 seconds")
 }
 ```
 
--->
+
+
+## Opgaver
 
 
 
 ### Opgave 1 - Timer app
+
+[Her er starterkoden](https://github.com/behu-kea/konfetti-android) til opgaven
+
+
 
 1. Kig koden igennem og forstå den
 2. Lav en timer der venter 5 sekunder før den viser konfetti. Funktionaliteten skal laves inde i `ConfettiViewModel.kt`
    1. Gør det først via blocking behavior. Altså hvor UI ikke kan bruges imens vi venter 
    2. Derefter vent i 5 sekunder vha coroutines. 
 3. Gør sådan at en bruger kan skrive hvor lang tid der skal ventes før Konfetti skal vises efter der bliver trykket på knappen
-
-
-
-[Her er starterkoden](https://github.com/behu-kea/konfetti-android) til opgaven
 
 
 
