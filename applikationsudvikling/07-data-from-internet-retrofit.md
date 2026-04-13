@@ -59,13 +59,13 @@ interface Product {
 Here is how an `interface` gets implemented by a class
 
 ```kotlin
-class Television: Product {
-		override val name: String,
+class Television(
+    override val name: String,
     override val price: Int,
     override val id: Int
 ) : Product {
     override fun printProductDetails() {
-				println("${this.name} is an amazing television");
+        TODO("Not yet implemented")
     }
 }
 ```
