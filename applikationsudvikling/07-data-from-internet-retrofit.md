@@ -24,6 +24,7 @@
 ## Overview
 
 - Typer er vigtige: [2038 Will Be the End of Time (In the Unix 32-Bit Timecode)](https://www.youtube.com/watch?v=zZwzrlLc_oc)
+- [https://www.youtube.com/@Fireship](https://www.youtube.com/@Fireship)
 - Go through slides
 - Opgaver
 
@@ -97,6 +98,56 @@ A class can inherit from only one class but can implement mutiple interfaces
 
 
 
+
+
+
+
+### Getting internet to work
+
+Reference: [https://github.com/nicklasdean/catfacts-app](https://github.com/nicklasdean/catfacts-app)
+
+**Important**
+
+- Insert the following into your `AndroidManifest.xml`
+  - Found in the manifests folder
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+- Insert before the <application tag
+
+```xml
+// Like this
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"                             
+...
+```
+
+
+
+### Install retrofit2
+
+Add this to the module gradle file under dependencies
+
+```
+// Retrofit
+implementation("com.squareup.retrofit2:retrofit:2.9.0")
+// Retrofit with Scalar Converter
+implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+```
+
+
+
+
+
 ### Retrofit HTTP Client
 
 Retrofit is a popular HTTP client library in Kotlin that simplifies sending HTTP requests and processing API responses. It uses annotations to define the HTTP operations and converts JSON to Kotlin objects automatically.
@@ -106,6 +157,8 @@ Retrofit is a popular HTTP client library in Kotlin that simplifies sending HTTP
 #### API Interface
 
 The API interface in Retrofit defines the endpoints of your API. It acts as a contract that specifies the HTTP operations your app can perform. Annotations like `@GET`, `@POST`, etc., specify the type of HTTP request.
+
+
 
 **Example:**
 
@@ -176,46 +229,34 @@ class RetrofitInstance {
 
 
 
-### Getting internet to work
+### Getting the results
 
-Reference: [https://github.com/nicklasdean/catfacts-app](https://github.com/nicklasdean/catfacts-app)
+```kotlin
+class MainActivity : ComponentActivity() {
+    @SuppressLint("CoroutineCreationDuringComposition")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
-**Important**
+        val retroFitInstance = RetrofitInstance()
 
-- Insert the following into your `AndroidManifest.xml`
-  - Found in the manifests folder
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
-- Insert before the <application tag
-
-```xml
-// Like this
-
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"                             
-...
-```
-
-
-
-### Install retrofit2
-
-Add this to the module gradle file under dependencies
-
-```
-// Retrofit
-implementation("com.squareup.retrofit2:retrofit:2.9.0")
-// Retrofit with Scalar Converter
-implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+        setContent {
+            var posts: List<Post> by remember { mutableStateOf(listOf()) }
+						
+          	// Kalde asynkron kode
+            lifecycleScope.launch {
+                posts = retroFitInstance.apiService.getAllPosts()
+            }
+          
+            LazyColumn {
+                items(posts) { post ->
+                    Text(post.title)
+                    Text(post.body)
+                }
+            }
+        }
+    }
+}
 ```
 
 
@@ -245,14 +286,14 @@ Create two `Mobile` and two `RaspberryPi` objects
 
 Reference project: [https://github.com/nicklasdean/retrofit-basic](https://github.com/nicklasdean/retrofit-basic)
 
-Vi starter med nogle opgaver der skal træne jeres Retro færdigheder og få sendt nogle requests afsted. vi skal arbejde med det her api: [https://reqres.in/](https://reqres.in/)
+Vi starter med nogle opgaver der skal træne jeres Retro færdigheder og få sendt nogle requests afsted. vi skal arbejde med det her api: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
 
 
 
 #### Get requests
 
-1. Log alle brugerne ud vha  [https://reqres.in/api/users](https://reqres.in/api/users)
-2. Log en specifik bruger ud vha [https://reqres.in/api/users/2](https://reqres.in/api/users/2)
+1. Log alle posts ud vha  [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
+2. Log en specifik post ud vha [https://jsonplaceholder.typicode.com/posts/1](https://jsonplaceholder.typicode.com/posts/1)
 
 
 
@@ -278,7 +319,11 @@ Slet en bruger
 
 ### Opgave 3 - Generativ AI app
 
-Start arbejdet på en Generativ AI app
+Start arbejdet på en Generativ AI app. I kan køre en model lokalt, eller bruge mistral, openai, etc
+
+[https://behu.gitbook.io/ita25-1-sem/webteknologi/17-lets-build-a-generative-ai-tool#getting-started](https://behu.gitbook.io/ita25-1-sem/webteknologi/17-lets-build-a-generative-ai-tool#getting-started)
+
+- Open AI api dokumentation: [https://developers.openai.com/api/reference/resources/responses/methods/create](https://developers.openai.com/api/reference/resources/responses/methods/create)
 
 
 
