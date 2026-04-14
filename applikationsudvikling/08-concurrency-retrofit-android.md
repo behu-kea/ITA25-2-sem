@@ -82,11 +82,13 @@ Coroutines are managed in different scopes. The scopes manage the coroutines. Fx
 
 
 
-Here is an example:
+Here is an example of code you can run in `MainActivity`, remember to disable the error by adding this line: `@SuppressLint("CoroutineCreationDuringComposition")` after `class MainActivity : ComponentActivity() {`
 
 ```kotlin
 lifecycleScope.launch(Dispatchers.IO) {
-
+  // asynchronous code
+	val post = retrofitInstance.apiService.getPost()
+  Log.d("timer", "After the post is fetched this will get logged out")
 }
 ```
 
@@ -96,7 +98,7 @@ lifecycleScope.launch(Dispatchers.IO) {
 
 To create a delay use the `delay` suspend function
 
-You can try and add in inside the `setContent` of `MainActivity`
+You can try and add the following code inside the `setContent` of `MainActivity`
 
 ```kotlin
 lifecycleScope.launch {
@@ -121,8 +123,6 @@ lifecycleScope.launch {
 
 1. Kig koden igennem og forstå den
 2. Lav en timer der venter 5 sekunder før den viser konfetti. Funktionaliteten skal laves inde i `ConfettiViewModel.kt`
-   1. Gør det først via blocking behavior. Altså hvor UI ikke kan bruges imens vi venter 
-   2. Derefter vent i 5 sekunder vha coroutines. 
 3. Gør sådan at en bruger kan skrive hvor lang tid der skal ventes før Konfetti skal vises efter der bliver trykket på knappen
 
 
