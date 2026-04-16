@@ -1,4 +1,4 @@
-# Firebase Cloud Firestore
+# Supabase
 
 
 
@@ -95,7 +95,7 @@ await supabase
 
 ## Overview
 
-- [https://www.youtube.com/ariathome](https://www.youtube.com/ariathome)
+- [https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s](https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s)
 - Viewmodel statehoisting recap
   - Start med `forEach`
 - Intro til Supabase
@@ -111,7 +111,7 @@ await supabase
 - Arbejd med opgaver
 - Pause kl 10
 - Studenterpræsentation kl 11:30
-- Create an app that uses firestore to save some entities (notes, videos, recipes, whatever)
+- Create an app that uses Supabase to save some entities (notes, videos, recipes, whatever)
 
 
 
@@ -149,7 +149,7 @@ Nu har Michael og Todoist fået blod på tanden og vil udvide deres produktporte
 
 Prototypen til den nye Notes-app kan findes her: [https://github.com/behu-kea/note-app](https://www.google.com/url?sa=E&q=https%3A%2F%2Fgithub.com%2Fbehu-kea%2Fnote-app)
 
-Michael nævner også, at denne app bruger noget fancy "Firestore" til at gemme data i skyen.
+Michael nævner også, at denne app bruger noget fancy "Supabase" til at gemme data i skyen.
 
 
 

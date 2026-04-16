@@ -127,6 +127,12 @@ lifecycleScope.launch {
 
 
 
+#### Til at installere Konfetti bibliotek
+
+`build.gradle.kts` module app: `implementation(libs.konfetti.compose)`
+
+
+
 ### Opgave 2 -  GenAI app
 
 Arbejd videre på jeres Generativ AI app
