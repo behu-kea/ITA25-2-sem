@@ -254,6 +254,8 @@ Read more about UI testing in compose here: [https://developer.android.com/jetpa
 
 ## Exercises
 
+Clone this project: [https://github.com/behu-kea/testing-signup-form](https://github.com/behu-kea/testing-signup-form) please work 🤞
+
 You will work with a small signup app that contains bugs on purpose.
 
 Your job is to:
