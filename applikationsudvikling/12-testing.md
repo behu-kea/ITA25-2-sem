@@ -4,9 +4,6 @@
 
 ## Overview
 
-- Min Strøm aflevering på søndag
-- Præsentation på torsdag
-
 
 
 ### Eksamen
@@ -40,7 +37,7 @@ https://katalog.kea.dk/course/4111201/2024-2025
 
 
 
-Testing er en del af kvalitetssikringen af jeres app.
+Testing er en del af kvalitetssikringen af jeres app! Det er en skill at være dygtig til testing. Man skal tænke ud af boksen. 
 
 Three types of tests:
 
@@ -257,43 +254,168 @@ Read more about UI testing in compose here: [https://developer.android.com/jetpa
 
 ## Exercises
 
-I skal lave nogle tests på en app i har lavet i kurset. Det oplagte ville være Min Strøm appen. 
+You will work with a small signup app that contains bugs on purpose.
 
-Hvis i ikke er kommet så langt med Min Strøm, kan i bruge Note appen i har lavet.  
+Your job is to:
 
-Ellers kan i finde Note appen med alle features [her](https://github.com/behu-kea/ita-23-2-sem-code/tree/for-testing-lecture/noteapp). I skal lige have firebase tilkoblet. Det kan i læse om under firebase gangen.
+- explore the app
+- understand the code
+- break the validation
+- write tests
+- fix the code
+- test navigation
 
-
-
-### Manual Exploratory Testing
-
-I skal finde bugs og fejl i jeres applikation igennem manuel eksplorativ testing, ligesom Stefanos fra Framna snakkede om
-
-- Test every feature you just developed thoroughly
-
-- Think out-of-the box and test edge cases
-  - What if the network is slow
-  - What if the request fails
-  - What if the result is empty
-  - What if the app is paused and opened again
-  - What if the app is killed and opened again
-  - What if you get logged out (401)
+Do not jump straight to coding. Start by behaving like a tester.
 
 
 
-### Unit tests
+### Part 1 - Try the app
 
-Lav nogle Unit tests for den app i har valgt.
+Run the app and use it like a normal user.
+
+Try:
+
+- valid inputs
+- invalid inputs
+- strange inputs
+- Find bugs!
+
+Your goal is to see what the app allows and what it blocks.
 
 
 
-### UI tests
+#### Task
 
-Lav nogle UI tests for den app i har valgt.
+Find at least **5 cases** where the behavior is surprising, wrong, or unclear.
+
+Write down:
+
+- what you entered
+- what happened
+- what you think should have happened
 
 
 
-### Fortsæt Min Strøm appen
+### Part 2 - Read the code
+
+Open the code and get an overview of how it works
+
+- where the state is stored
+- where validation happens
+- where navigation happens
+
+Focus especially on:
+
+- `signup()`
+- `isValidCpr()`
+- `isEmailvalid()`
+
+
+
+#### Task
+
+Explain in your own words:
+
+- When does the app navigate to the next screen?
+- What does the current validation actually check?
+
+
+
+### Part 3 - Try to break the validation
+
+Now actively try to break the system. Do not change the code yet.
+
+
+
+#### Task
+
+Find inputs that should be invalid but are currently accepted.
+
+Do this for both:
+
+- email
+- CPR number
+
+Write down at least:
+
+- **3 problematic email inputs**
+- **3 problematic CPR inputs**
+
+
+
+### Part 4 - Write unit tests
+
+Before fixing anything, write tests that describe how the validation **should** behave. Your tests go in the:
+
+`test/SignupViewModelTest.kt` 
+
+
+
+#### Task
+
+Write unit tests for:
+
+- email validation
+- CPR validation
+
+Some of your tests will fail. That is expected
+
+
+
+### Part 5 - Fix the code
+
+Now update the validation logic so the behavior matches your tests.
+
+Do not remove tests. Make the code pass them.
+
+
+
+### Part 6 - Add a UI test
+
+Create one UI test that verifies navigation behavior.
+
+
+
+#### Task
+
+Write a test that checks:
+
+The app should **not navigate** when the form is invalid.
+
+You can choose the specific case yourself.
+
+
+
+### Deliverables
+
+You should have:
+
+- notes from manual testing
+- unit tests for validation
+- updated validation logic
+- one UI test for navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Fortsæt Generativ AI appen
 
 
 

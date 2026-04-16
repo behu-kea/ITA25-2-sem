@@ -96,22 +96,32 @@ await supabase
 ## Overview
 
 - [https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s](https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s)
-- Viewmodel statehoisting recap
-  - Start med `forEach`
-- Intro til Supabase
+- Vis slides
+  - Intro til Supabase
   - Open source postgres database
-
-- RLS
-- Repositories pattern
+  - RLS
+  - Repositories pattern
+  
 - Supabase med Kotlin
   - [Getting started](https://supabase.com/docs/guides/getting-started/quickstarts/kotlin)
   - [https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin](https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin)
-
 - Benjamin laver en app der kan gemme data
 - Arbejd med opgaver
 - Pause kl 10
 - Studenterpræsentation kl 11:30
-- Create an app that uses Supabase to save some entities (notes, videos, recipes, whatever)
+
+
+
+## Topics
+
+
+
+### Install Firebase
+
+Følg de her guides:
+
+- [Getting started](https://supabase.com/docs/guides/getting-started/quickstarts/kotlin)
+- [https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin](https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin)
 
 
 
@@ -124,6 +134,8 @@ Den anden del fokuserer på hvordan man ville bruge Supabase i et mere "professi
 
 
 ### Opgave 1
+
+Brug det her projekt som reference, men kun hvis det hjælper jer! [https://github.com/behu-kea/ita25-2sem-code/tree/main/supabaseexample](https://github.com/behu-kea/ita25-2sem-code/tree/main/supabaseexample)
 
 Lav en app der kan hente, oprette, slette og opdatere en bestemt type entiteter: Eksamener, Fodboldhold, Patienter, Træningsprogram. Det er sådan set lige meget, bare noget i finder interessant. Hvordan i gør det er op til jer. 
 
