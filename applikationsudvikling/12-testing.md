@@ -4,6 +4,8 @@
 
 ## Overview
 
+-  Jeg skal lige forberede et projekt jeg kan lave/vise
+
 
 
 ### Eksamen
