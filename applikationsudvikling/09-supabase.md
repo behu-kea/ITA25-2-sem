@@ -96,6 +96,8 @@ await supabase
 ## Overview
 
 - [https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s](https://www.youtube.com/watch?v=0Ssi-9wS1so&t=990s)
+- Vibe kodning bug fix
+  
 - Vis slides
   - Intro til Supabase
   - Open source postgres database
@@ -113,6 +115,67 @@ await supabase
 
 
 ## Topics
+
+
+
+## Creating the client to work with
+
+```kotlin
+val supabase = createSupabaseClient(
+    supabaseUrl = "SUPABASEURL",
+    supabaseKey = "SUPABASEKEY"
+) {
+    install(Postgrest)
+}
+```
+
+
+
+### Creating the entity
+
+Add the `@Serializable` annotation before the class
+
+```kotlin
+@Serializable
+data class Instrument(
+    val id: Int? = null,
+    val name: String,
+)
+```
+
+
+
+### Selecting entities
+
+```kotlin
+return supabase
+  .from("instruments")
+  .select()
+```
+
+
+
+### Creating entities
+
+```kotlin
+supabase
+  .from("instruments")
+  .insert(instrument)
+```
+
+
+
+### Deleting entities
+
+```kotlin
+supabase
+  .from("instruments")
+  .delete {
+      filter {
+          eq("id", id)
+      }
+  }
+```
 
 
 
@@ -194,8 +257,3 @@ Nu hvor I har adgang og kan køre appen, er det tid til at smøge ærmerne op:
 **Vigtig Note fra Michael:** "Jeg stoler på jer! Men husk nu, efter sidste omgang med den AI-genererede kode, vil bestyrelsen gerne se, at *I* tænker jer om og skriver den *nye* kode selv. Brug jeres viden om god arkitektur og kodningspraksis – det er *jer*, der er eksperterne her, ikke en eller anden chat-robot!"
 
 Held og lykke, konsulenter! Todoist regner med jer!
-
-
-
-
-
