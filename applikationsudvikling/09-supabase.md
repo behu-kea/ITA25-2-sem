@@ -44,13 +44,7 @@ await supabase
 
 
 
-UI der viser hvordan mineksamen ser ud fra en undervisers perspektiv
-
-![CleanShot-2026-02-10-at-11.01.12](assets/CleanShot-2026-02-10-at-11.01.12.png)
-
-
-
-Okay. Så buggen var altså at den opdaterede alle eksamenerne for en studerende på en eksamen. Men man kan jo have taget mange eksamener.
+Buggen var at den opdaterede alle eksamenerne for en studerende på en eksamen. Men man kan jo have taget mange eksamener.
 
 
 
@@ -61,6 +55,7 @@ const { data: latestExam } = await supabase
   .from("exam_logs")
   .select("id")
   .eq("examID", examId)
+  .eq("user_id", userId)
   .order("created_at", { ascending: false })
   .limit(1)
   .single();
