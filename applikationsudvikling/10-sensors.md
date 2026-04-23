@@ -4,6 +4,40 @@ Idag skal i selv researche et emne. Det er for at gøre jeg klar til at blive ri
 
 
 
+## Overview
+
+- Snakke eksamen lav en mineksamen
+
+
+
+<!--
+
+### Eksamen
+
+Minimum for at bestå:
+
+- Klasser og objekter
+- Big O & Datastrukturer
+- Lambda funktioner, trailing lambda
+- Composables
+- Recomposition & state
+- Git 
+
+
+
+### Næste niveau
+
+- Navigation
+- Algoritmer
+
+
+
+https://katalog.kea.dk/course/4111201/2024-2025
+
+-->
+
+
+
 ## Sådan researcher jeg
 
 1. Big picture gerne med noget youtube eller ChatGPT
@@ -92,10 +126,6 @@ This gives access to the camera
 
 <uses-permission android:name="android.permission.CAMERA" />
 ```
-
-
-
-
 
 
 

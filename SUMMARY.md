@@ -25,8 +25,8 @@
   * [08 - Concurrency & Retrofit in Android](applikationsudvikling/08-concurrency-retrofit-android.md)
   * [09 - Supabase](applikationsudvikling/09-supabase.md)
   * [10 - Testing](applikationsudvikling/12-testing.md)
-  * [11 - Shape kommer forbi](applikationsudvikling/11-shape.md)
   * [12 - Working with sensors](applikationsudvikling/10-sensors.md)
+  * [11 - Shape kommer forbi](applikationsudvikling/11-shape.md)
   * [13 - Android recap](applikationsudvikling/13-android-recap.md)
 
 

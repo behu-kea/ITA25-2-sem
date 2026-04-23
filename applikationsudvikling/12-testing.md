@@ -4,36 +4,17 @@
 
 ## Overview
 
--  På mandag skal vi vibekode
+-  Midtvejsevaluering
+-  På mandag skal arbejde med sensors
+   -  Kamera
+   -  Accelerometer
+   -  Notifikationer
+   -  Lokation
+
 -  På onsdag kommer Framna. Danmarks førende appudviklingshus forbi og snakker om deres udviklingsprocess og hvordan det er at arbejde der
 
-
-
-<!--
-
-### Eksamen
-
-Minimum for at bestå:
-
-- Klasser og objekter
-- Big O & Datastrukturer
-- Lambda funktioner, trailing lambda
-- Composables
-- Recomposition & state
-- Git 
-
-
-
-### Næste niveau
-
-- Navigation
-- Algoritmer
-
-
-
-https://katalog.kea.dk/course/4111201/2024-2025
-
--->
+- 4/5 præsentation af eksamenscase never another
+- GPT-image 2
 
 
 
